@@ -240,7 +240,7 @@ cd "Progr WEB Prof Tiago 05Jan/Aula08"
 npm install
 
 # 3. Inicie o servidor de desenvolvimento
-npm start
+npm run dev
 # → Servidor rodando em http://localhost:3000
 ```
 
@@ -250,7 +250,17 @@ npm start
 
 | Script | Comando | Descrição |
 |---|---|---|
-| `start` | `nodemon ./index.js` | Inicia em modo desenvolvimento |
+| `dev` | `nodemon ./index.js` | Inicia em modo desenvolvimento |
+| `start` | `node ./index.js` | Inicia em modo produção |
+
+---
+
+## ▲ Deploy no Vercel (GitHub)
+
+- Mantenha todos os arquivos do projeto na raiz do repositório (onde estão `index.js`, `package.json` e `vercel.json`).
+- Envie para o GitHub e importe o repositório no Vercel.
+- Em **Build & Output Settings**, deixe padrão (o `vercel.json` já define o deploy Node).
+- Após o deploy, todas as rotas (`/`, `/cursos`, `/curso/:id`, etc.) serão atendidas pelo Express.
 
 ---
 
