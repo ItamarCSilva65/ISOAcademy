@@ -41,7 +41,11 @@ router.get('/cursos_in_company', (req, res) => {
 });
 
 router.get('/cursos_em_destaque', (req, res) => {
-    res.render('cursos_em_destaque');
+    const cursosDestaque = coursesData.filter(c => c.destaque);
+    res.render('cursos_em_destaque', {
+        title: 'Cursos em Destaque - ISOAcademy',
+        courses: cursosDestaque
+    });
 });
 
 router.get('/nossos_numeros', (req, res) => {

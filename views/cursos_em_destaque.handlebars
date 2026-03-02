@@ -7,15 +7,12 @@
         {{#each courses}}
         <article class="course-card">
             <div class="card-image">
-                <span class="badge-destaque"
-                    style="position: absolute; background: #f1c40f; color: #333; padding: 5px 10px; font-weight: bold; border-bottom-right-radius: 8px;">Mais
-                    Vendido</span>
-                <img src="{{this.img}}" alt="{{this.nome}}"
-                    style="border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                <span class="badge-destaque">Mais Vendido</span>
+                <img src="{{this.img}}" alt="{{t this.nome ../lang}}">
             </div>
             <div class="card-content">
-                <h3>{{this.nome}}</h3>
-                <p class="course-subtitle">{{this.titulo_completo}}</p>
+                <h3>{{t this.nome ../lang}}</h3>
+                <p class="course-subtitle">{{t this.titulo_completo ../lang}}</p>
                 <div class="card-footer" style="flex-wrap: wrap; gap: 10px;">
                     <span class="price">{{formatCurrency this.preco}}</span>
                     <div style="display: flex; gap: 10px; width: 100%; justify-content: flex-end;">
