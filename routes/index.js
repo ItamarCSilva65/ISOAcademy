@@ -4,6 +4,32 @@ const router = express.Router();
 const coursesData = require('../data/coursesData');
 const cursosGratuitosData = require('../data/cursos_gratuitosData');
 
+const DEFAULT_MONTHLY_REAJUSTE_INDEX = Number(process.env.PAYMENT_REAJUSTE_INDEX || 0.0199);
+
+const roundMoney = (value) => Number(value.toFixed(2));
+
+const buildCreditOptions = (baseValue, monthlyIndex) => {
+    const options = [];
+
+    for (let installment = 1; installment <= 10; installment += 1) {
+        if (installment === 5) continue;
+
+        const hasIncrease = installment >= 6;
+        const totalValue = hasIncrease
+            ? baseValue * Math.pow(1 + monthlyIndex, installment - 5)
+            : baseValue;
+
+        options.push({
+            parcelas: installment,
+            acrescimo: roundMoney(totalValue - baseValue),
+            total: roundMoney(totalValue),
+            valorParcela: roundMoney(totalValue / installment)
+        });
+    }
+
+    return options;
+};
+
 // Rota Home
 router.get('/', (req, res) => {
     const cursosDestaque = coursesData.filter(c => c.destaque);
@@ -114,6 +140,60 @@ router.get('/carrinho', (req, res) => {
 // Rota Checkout
 router.get('/checkout', (req, res) => {
     res.render('checkout', { title: 'Finalizar Matrícula' });
+});
+
+// API Formas de Pagamento
+router.get('/api/pagamentos', (req, res) => {
+    const valor = Number(req.query.valor);
+
+    if (!Number.isFinite(valor) || valor <= 0) {
+        return res.status(400).json({
+            error: 'Informe um valor válido no parâmetro "valor". Exemplo: /api/pagamentos?valor=329.9'
+        });
+    }
+
+    const indexFromQuery = Number(req.query.indice);
+    const monthlyIndex = Number.isFinite(indexFromQuery) && indexFromQuery >= 0
+        ? indexFromQuery
+        : DEFAULT_MONTHLY_REAJUSTE_INDEX;
+
+    const creditOptions = buildCreditOptions(valor, monthlyIndex);
+
+    res.json({
+        valorBaseCurso: roundMoney(valor),
+        moeda: 'BRL',
+        formasPagamento: [
+            {
+                tipo: 'a_vista',
+                total: roundMoney(valor),
+                valorParcela: roundMoney(valor),
+                acrescimo: 0
+            },
+            {
+                tipo: 'debito',
+                total: roundMoney(valor),
+                valorParcela: roundMoney(valor),
+                acrescimo: 0
+            },
+            {
+                tipo: 'pix',
+                total: roundMoney(valor),
+                valorParcela: roundMoney(valor),
+                acrescimo: 0
+            },
+            {
+                tipo: 'cartao_credito',
+                regras: {
+                    semAcrescimoAte: 4,
+                    acrescimoAPartirDe: 6,
+                    maximoParcelas: 10,
+                    indiceReajusteMensal: monthlyIndex,
+                    observacao: 'Parcelamento de 5x não é ofertado nesta regra comercial.'
+                },
+                opcoes: creditOptions
+            }
+        ]
+    });
 });
 
 // Rota Processamento de Compra

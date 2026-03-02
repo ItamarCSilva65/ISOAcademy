@@ -168,6 +168,7 @@ O projeto simula um **e-commerce educacional** completo: catálogo de cursos, ca
 | `GET` | `/carrinho` | `carrinho.handlebars` | Carrinho de compras |
 | `GET` | `/login` | `login.handlebars` | Login + cadastro |
 | `GET` | `/checkout` | `checkout.handlebars` | Finalização de matrícula |
+| `GET` | `/api/pagamentos?valor=329.9` | JSON | Formas de pagamento: à vista, débito, pix e cartão (1x–4x sem acréscimo; 6x–10x com reajuste) |
 | `POST` | `/finalizar-compra` | — | Confirmação de compra |
 
 ---

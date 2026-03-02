@@ -1,42 +1,65 @@
 <svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">ISO 31000:2018 - Gestão de Riscos</title>
-  <desc id="desc">Capa do curso ISO 31000 com visual corporativo em tons de azul.</desc>
+  <title id="title">ISO 31000:2018 — Gestão de Riscos</title>
+  <desc id="desc">Capa premium do curso ISO 31000 com visual executivo e elementos de risco, estratégia e decisão.</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2C3E50"/>
-      <stop offset="1" stop-color="#1E2B38"/>
+      <stop offset="0" stop-color="#0B1E37"/>
+      <stop offset="0.52" stop-color="#163A63"/>
+      <stop offset="1" stop-color="#0A2A4A"/>
     </linearGradient>
-    <linearGradient id="accent" x1="190" y1="530" x2="860" y2="130" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#3498DB" stop-opacity="0.95"/>
-      <stop offset="1" stop-color="#5DADE2" stop-opacity="0.85"/>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1050 120) rotate(140) scale(410 360)">
+      <stop stop-color="#8FD3FF" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#8FD3FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="110" y1="90" x2="760" y2="590" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.04"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.22"/>
+    <linearGradient id="wave" x1="40" y1="480" x2="920" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4FC3FF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#9EE4FF" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.28"/>
     </filter>
   </defs>
 
   <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#light)"/>
 
-  <circle cx="1030" cy="120" r="230" fill="#3498DB" fill-opacity="0.08"/>
-  <circle cx="1055" cy="135" r="170" stroke="#5DADE2" stroke-opacity="0.28" stroke-width="2"/>
-  <circle cx="1025" cy="110" r="110" stroke="#5DADE2" stroke-opacity="0.2" stroke-width="2"/>
+  <g opacity="0.28">
+    <path d="M890 70L1120 70" stroke="#9ED9FF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M930 105L1110 105" stroke="#9ED9FF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M970 140L1100 140" stroke="#9ED9FF" stroke-width="2" stroke-linecap="round"/>
+  </g>
 
-  <path d="M0 520 C220 430 420 610 640 520 C840 437 980 340 1200 420 L1200 675 L0 675 Z" fill="url(#accent)" fill-opacity="0.32"/>
+  <path d="M0 535C190 470 380 595 600 530C810 468 1000 370 1200 430V675H0V535Z" fill="url(#wave)"/>
 
-  <rect x="80" y="90" width="740" height="495" rx="22" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)" filter="url(#soft)"/>
+  <rect x="90" y="78" width="770" height="520" rx="28" fill="url(#panel)" stroke="#CBE7FF" stroke-opacity="0.28" filter="url(#shadow)"/>
 
-  <text x="120" y="170" fill="#D6EAF8" font-family="Roboto, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1.5">ISO ACADEMY</text>
-  <text x="120" y="265" fill="#FFFFFF" font-family="Roboto, Arial, sans-serif" font-size="86" font-weight="700">ISO 31000:2018</text>
-  <text x="120" y="340" fill="#AED6F1" font-family="Roboto, Arial, sans-serif" font-size="44" font-weight="400">Gestão de Riscos</text>
+  <g transform="translate(110 112)">
+    <rect width="168" height="42" rx="21" fill="#57C3FF" fill-opacity="0.2" stroke="#8DD8FF" stroke-opacity="0.45"/>
+    <text x="84" y="28" text-anchor="middle" fill="#DDF3FF" font-family="Roboto, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="0.9">ISO ACADEMY</text>
+  </g>
 
-  <line x1="120" y1="382" x2="580" y2="382" stroke="#5DADE2" stroke-width="4" stroke-linecap="round"/>
+  <text x="122" y="255" fill="#FFFFFF" font-family="Roboto, Arial, sans-serif" font-size="86" font-weight="700">ISO 31000:2018</text>
+  <text x="122" y="328" fill="#BEE8FF" font-family="Roboto, Arial, sans-serif" font-size="44" font-weight="500">Gestão de Riscos</text>
 
-  <text x="120" y="438" fill="#EAF2F8" font-family="Roboto, Arial, sans-serif" font-size="30" font-weight="400">Princípios • Estrutura • Processo</text>
-  <text x="120" y="482" fill="#D4E6F1" font-family="Roboto, Arial, sans-serif" font-size="25" font-weight="400">Tomada de decisão estratégica e operacional</text>
+  <line x1="122" y1="370" x2="620" y2="370" stroke="#7FD2FF" stroke-width="4" stroke-linecap="round"/>
 
-  <g transform="translate(880 470)">
-    <rect width="250" height="74" rx="37" fill="#3498DB"/>
-    <text x="125" y="47" text-anchor="middle" fill="#FFFFFF" font-family="Roboto, Arial, sans-serif" font-size="28" font-weight="700">NOVA TURMA</text>
+  <text x="122" y="428" fill="#EAF7FF" font-family="Roboto, Arial, sans-serif" font-size="30" font-weight="400">Governança • Cultura • Estratégia</text>
+  <text x="122" y="474" fill="#D8EEFF" font-family="Roboto, Arial, sans-serif" font-size="26" font-weight="400">Decisões mais seguras com foco em continuidade e performance</text>
+
+  <g transform="translate(885 455)">
+    <rect width="255" height="80" rx="40" fill="#32B5FF"/>
+    <text x="127.5" y="50" text-anchor="middle" fill="#FFFFFF" font-family="Roboto, Arial, sans-serif" font-size="30" font-weight="700">NOVA TURMA</text>
+  </g>
+
+  <g opacity="0.55" transform="translate(915 228)">
+    <circle cx="78" cy="78" r="74" stroke="#A9E0FF" stroke-width="2"/>
+    <circle cx="78" cy="78" r="50" stroke="#A9E0FF" stroke-width="2"/>
+    <circle cx="78" cy="78" r="26" stroke="#A9E0FF" stroke-width="2"/>
+    <path d="M78 9V147M9 78H147" stroke="#A9E0FF" stroke-width="2" stroke-linecap="round"/>
   </g>
 </svg>
