@@ -144,6 +144,30 @@ const courses = [
         },
         img: '/img/iso-19011-cover.png',
         destaque: false
+    },
+    {
+        id: 'iso-31000',
+        nome: {
+            pt: 'ISO 31000:2018',
+            en: 'ISO 31000:2018',
+            fr: 'ISO 31000:2018',
+            es: 'ISO 31000:2018'
+        },
+        titulo_completo: {
+            pt: 'Gestão de Riscos — Diretrizes',
+            en: 'Risk Management — Guidelines',
+            fr: 'Management du Risque — Lignes Directrices',
+            es: 'Gestión del Riesgo — Directrices'
+        },
+        preco: 329.90,
+        desc: {
+            pt: 'Aprenda princípios, estrutura e processo de gestão de riscos para apoiar decisões estratégicas e operacionais.',
+            en: 'Learn risk management principles, framework, and process to support strategic and operational decision-making.',
+            fr: 'Apprenez les principes, le cadre et le processus de management du risque pour soutenir les décisions stratégiques et opérationnelles.',
+            es: 'Aprenda los principios, el marco y el proceso de gestión del riesgo para respaldar decisiones estratégicas y operativas.'
+        },
+        img: '/img/iso-31000-cover.png',
+        destaque: true
     }
 ];
 
