@@ -62,7 +62,7 @@ router.get('/curso/:id', (req, res) => {
     }
 
     res.render('product', {
-        title: `${course.nome} - Detalhes`,
+        title: `${course.nome.pt || 'Curso'} - Detalhes`,
         course
     });
 });

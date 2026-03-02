@@ -166,7 +166,7 @@ const courses = [
             fr: 'Apprenez les principes, le cadre et le processus de management du risque pour soutenir les décisions stratégiques et opérationnelles.',
             es: 'Aprenda los principios, el marco y el proceso de gestión del riesgo para respaldar decisiones estratégicas y operativas.'
         },
-        img: '/img/iso-31000-cover.png',
+        img: '/img/iso-31000-cover.svg',
         destaque: true
     }
 ];

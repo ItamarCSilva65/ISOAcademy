@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-   <div class="product-detail-container">
+<div class="product-detail-container">
     <div class="product-image">
-        <img src="{{course.img}}" alt="{{course.nome}}">
+        <img src="{{course.img}}" alt="{{t course.nome lang}}">
     </div>
     <div class="product-info">
         <div class="breadcrumbs">
-            <a href="/">Home</a> > <a href="/cursos">Cursos</a> > <span>{{course.nome}}</span>
+            <a href="/">Home</a> > <a href="/cursos">Cursos</a> > <span>{{t course.nome lang}}</span>
         </div>
         
-        <h1>{{course.nome}}</h1>
-        <h2 class="subtitle">{{course.titulo_completo}}</h2>
-        <p class="description">{{course.desc}}</p>
+        <h1>{{t course.nome lang}}</h1>
+        <h2 class="subtitle">{{t course.titulo_completo lang}}</h2>
+        <p class="description">{{t course.desc lang}}</p>
         
         <ul class="benefits-list">
             <li>✓ Certificado válido em todo território nacional</li>
@@ -36,7 +27,4 @@
         <a href="/" class="back-link">← Voltar para a loja</a>
     </div>
 </div>
-     
-</body>
-</html>
 

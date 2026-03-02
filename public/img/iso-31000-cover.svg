@@ -1,0 +1,42 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ISO 31000:2018 - Gestão de Riscos</title>
+  <desc id="desc">Capa do curso ISO 31000 com visual corporativo em tons de azul.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2C3E50"/>
+      <stop offset="1" stop-color="#1E2B38"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="190" y1="530" x2="860" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3498DB" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#5DADE2" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+
+  <circle cx="1030" cy="120" r="230" fill="#3498DB" fill-opacity="0.08"/>
+  <circle cx="1055" cy="135" r="170" stroke="#5DADE2" stroke-opacity="0.28" stroke-width="2"/>
+  <circle cx="1025" cy="110" r="110" stroke="#5DADE2" stroke-opacity="0.2" stroke-width="2"/>
+
+  <path d="M0 520 C220 430 420 610 640 520 C840 437 980 340 1200 420 L1200 675 L0 675 Z" fill="url(#accent)" fill-opacity="0.32"/>
+
+  <rect x="80" y="90" width="740" height="495" rx="22" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)" filter="url(#soft)"/>
+
+  <text x="120" y="170" fill="#D6EAF8" font-family="Roboto, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1.5">ISO ACADEMY</text>
+  <text x="120" y="265" fill="#FFFFFF" font-family="Roboto, Arial, sans-serif" font-size="86" font-weight="700">ISO 31000:2018</text>
+  <text x="120" y="340" fill="#AED6F1" font-family="Roboto, Arial, sans-serif" font-size="44" font-weight="400">Gestão de Riscos</text>
+
+  <line x1="120" y1="382" x2="580" y2="382" stroke="#5DADE2" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="120" y="438" fill="#EAF2F8" font-family="Roboto, Arial, sans-serif" font-size="30" font-weight="400">Princípios • Estrutura • Processo</text>
+  <text x="120" y="482" fill="#D4E6F1" font-family="Roboto, Arial, sans-serif" font-size="25" font-weight="400">Tomada de decisão estratégica e operacional</text>
+
+  <g transform="translate(880 470)">
+    <rect width="250" height="74" rx="37" fill="#3498DB"/>
+    <text x="125" y="47" text-anchor="middle" fill="#FFFFFF" font-family="Roboto, Arial, sans-serif" font-size="28" font-weight="700">NOVA TURMA</text>
+  </g>
+</svg>
