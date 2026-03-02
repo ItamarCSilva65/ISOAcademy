@@ -52,6 +52,10 @@ router.get('/depoimentos', (req, res) => {
     res.render('depoimentos');
 });
 
+router.get('/sobre_nos', (req, res) => {
+    res.render('sobre_nos', { title: 'Sobre Nós - ISOAcademy' });
+});
+
 // Rota Detalhes do Produto
 router.get('/curso/:id', (req, res) => {
     const courseId = req.params.id;
