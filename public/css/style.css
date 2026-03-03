@@ -85,6 +85,60 @@ body.high-contrast .course-card {
     border: 1px solid #87ceeb;
 }
 
+body.high-contrast .catalog-filter-bar {
+    background: #e8efea !important;
+    border-color: #87ceeb !important;
+}
+
+body.high-contrast .filter-group label,
+body.high-contrast .catalog-filter-summary,
+body.high-contrast .active-filter-chips,
+body.high-contrast .filter-chip {
+    color: #1f2937 !important;
+}
+
+body.high-contrast .catalog-filter-bar .filter-group select,
+body.high-contrast .catalog-filter-bar .filter-group option {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-color: #9ca3af !important;
+}
+
+body.high-contrast .catalog-filter-bar .filter-group option:checked {
+    background: #dbeafe !important;
+    color: #0f172a !important;
+}
+
+body.high-contrast .catalog-filter-bar .filter-group select:focus {
+    outline: 2px solid #87ceeb;
+    outline-offset: 1px;
+}
+
+body.high-contrast .catalog-filter-bar .btn-primary {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #87ceeb !important;
+}
+
+body.high-contrast .catalog-filter-bar .btn-primary:hover {
+    background-color: #1f2937 !important;
+}
+
+body.high-contrast .catalog-filter-bar .btn-outline-secondary {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+    border: 1px solid #9ca3af !important;
+}
+
+body.high-contrast .catalog-filter-bar .btn-outline-secondary:hover {
+    background-color: #f3f4f6 !important;
+}
+
+body.high-contrast .filter-chip {
+    background: #dbe7df !important;
+    border-color: #9fb8aa !important;
+}
+
 a {
     text-decoration: none;
     color: inherit;
