@@ -17,6 +17,59 @@
         {{/if}}
     </h2>
 
+    {{#if isFullList}}
+    <form method="GET" action="/cursos" class="catalog-filter-bar">
+        <div class="filter-group">
+            <label for="filter-categoria">Categoria</label>
+            <select id="filter-categoria" name="categoria">
+                <option value="">Todas as categorias</option>
+                {{#each categoryOptions}}
+                <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="filter-nivel">Nível</label>
+            <select id="filter-nivel" name="nivel">
+                <option value="">Todos os níveis</option>
+                {{#each levelOptions}}
+                <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="filter-faixa-preco">Faixa de Preço</label>
+            <select id="filter-faixa-preco" name="faixa_preco">
+                <option value="">Todas as faixas</option>
+                {{#each priceOptions}}
+                <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div class="filter-actions">
+            <button type="submit" class="btn btn-primary">Aplicar filtros</button>
+            {{#if filters.hasActive}}
+            <a href="/cursos" class="btn btn-outline-secondary">Limpar</a>
+            {{/if}}
+        </div>
+    </form>
+
+    <p class="catalog-filter-summary">
+        Exibindo {{totalFiltered}} de {{totalCourses}} cursos.
+    </p>
+
+    {{#if filters.hasActive}}
+    <div class="active-filter-chips" aria-label="Filtros ativos">
+        {{#each activeFilterChips}}
+        <span class="filter-chip">{{this.label}}</span>
+        {{/each}}
+    </div>
+    {{/if}}
+    {{/if}}
+
     <div class="grid-courses">
         {{#each courses}}
         <article class="course-card">
@@ -35,6 +88,8 @@
                 </div>
             </div>
         </article>
+        {{else}}
+        <p class="catalog-empty">Nenhum curso encontrado para os filtros selecionados.</p>
         {{/each}}
     </div>
 

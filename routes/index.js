@@ -5,22 +5,69 @@ const coursesData = require('../data/coursesData');
 const cursosGratuitosData = require('../data/cursos_gratuitosData');
 
 const DEFAULT_MONTHLY_REAJUSTE_INDEX = Number(process.env.PAYMENT_REAJUSTE_INDEX || 0.0199);
+const CART_COOKIE_KEY = 'isoacademy_cart';
+const PRICE_RANGES = ['ate-300', '301-900', 'acima-900'];
+const CATEGORY_LABELS = {
+    normas_iso: 'Normas ISO',
+    auditoria_interna: 'Auditoria Interna',
+    auditoria_lider: 'Auditoria Líder',
+    implantacao_normas: 'Implantação de Normas',
+    introducao_normas: 'Introdução às Normas',
+    qualidade_melhoria: 'Qualidade e Melhoria',
+    gestao_projetos: 'Gestão de Projetos',
+    saude_seguranca: 'Saúde e Segurança',
+    laboratorios_metrologia: 'Laboratórios e Metrologia',
+    compliance_antissuborno: 'Compliance e Antissuborno',
+    gestao_processos: 'Gestão de Processos',
+    gestao_riscos: 'Gestão de Riscos',
+    gestao_organizacional: 'Gestão Organizacional'
+};
+const LEVEL_LABELS = {
+    basico: 'Básico',
+    intermediario: 'Intermediário',
+    avancado: 'Avançado'
+};
+const PRICE_LABELS = {
+    'ate-300': 'Até R$300',
+    '301-900': 'R$301–900',
+    'acima-900': 'Acima de R$900'
+};
 
 const roundMoney = (value) => Number(value.toFixed(2));
+
+const getCartIds = (req) => {
+    const raw = req.cookies?.[CART_COOKIE_KEY];
+    if (!raw) return [];
+
+    try {
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed)) return [];
+        return parsed.filter((id) => typeof id === 'string' && id.trim() !== '');
+    } catch {
+        return [];
+    }
+};
+
+const saveCartIds = (res, ids) => {
+    res.cookie(CART_COOKIE_KEY, JSON.stringify(ids), {
+        path: '/',
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+        sameSite: 'lax'
+    });
+};
 
 const buildCreditOptions = (baseValue, monthlyIndex) => {
     const options = [];
 
     for (let installment = 1; installment <= 10; installment += 1) {
-        if (installment === 5) continue;
-
-        const hasIncrease = installment >= 6;
+        const hasIncrease = installment >= 5;
         const totalValue = hasIncrease
-            ? baseValue * Math.pow(1 + monthlyIndex, installment - 5)
+            ? baseValue * Math.pow(1 + monthlyIndex, installment - 4)
             : baseValue;
 
         options.push({
             parcelas: installment,
+            semJuros: installment <= 4,
             acrescimo: roundMoney(totalValue - baseValue),
             total: roundMoney(totalValue),
             valorParcela: roundMoney(totalValue / installment)
@@ -46,10 +93,81 @@ router.get('/login', (req, res) => {
 
 // Rota para listar todos os cursos
 router.get('/cursos', (req, res) => {
+    const categoria = (req.query.categoria || '').trim();
+    const nivel = (req.query.nivel || '').trim();
+    const faixaPreco = (req.query.faixa_preco || '').trim();
+
+    const categoriasDisponiveis = Array.from(new Set(coursesData.map(c => c.categoria))).sort();
+    const niveisDisponiveis = Array.from(new Set(coursesData.map(c => c.nivel))).sort();
+
+    const categoriaValida = categoriasDisponiveis.includes(categoria) ? categoria : '';
+    const nivelValido = niveisDisponiveis.includes(nivel) ? nivel : '';
+    const faixaPrecoValida = PRICE_RANGES.includes(faixaPreco) ? faixaPreco : '';
+
+    const filteredCourses = coursesData.filter((course) => {
+        const categoryOk = !categoriaValida || course.categoria === categoriaValida;
+        const levelOk = !nivelValido || course.nivel === nivelValido;
+        const priceOk = !faixaPrecoValida
+            || (faixaPrecoValida === 'ate-300' && course.preco <= 300)
+            || (faixaPrecoValida === '301-900' && course.preco > 300 && course.preco <= 900)
+            || (faixaPrecoValida === 'acima-900' && course.preco > 900);
+        return categoryOk && levelOk && priceOk;
+    });
+
+    const categoryOptions = categoriasDisponiveis.map((value) => ({
+        value,
+        label: CATEGORY_LABELS[value] || value,
+        selected: value === categoriaValida
+    }));
+
+    const levelOptions = [
+        { value: 'basico', label: 'Básico', selected: 'basico' === nivelValido },
+        { value: 'intermediario', label: 'Intermediário', selected: 'intermediario' === nivelValido },
+        { value: 'avancado', label: 'Avançado', selected: 'avancado' === nivelValido }
+    ].filter(option => niveisDisponiveis.includes(option.value));
+
+    const priceOptions = [
+        { value: 'ate-300', label: 'Até R$300', selected: 'ate-300' === faixaPrecoValida },
+        { value: '301-900', label: 'R$301–900', selected: '301-900' === faixaPrecoValida },
+        { value: 'acima-900', label: 'Acima de R$900', selected: 'acima-900' === faixaPrecoValida }
+    ];
+
+    const activeFilterChips = [];
+    if (categoriaValida) {
+        activeFilterChips.push({
+            key: 'categoria',
+            label: `Categoria: ${CATEGORY_LABELS[categoriaValida] || categoriaValida}`
+        });
+    }
+    if (nivelValido) {
+        activeFilterChips.push({
+            key: 'nivel',
+            label: `Nível: ${LEVEL_LABELS[nivelValido] || nivelValido}`
+        });
+    }
+    if (faixaPrecoValida) {
+        activeFilterChips.push({
+            key: 'faixa_preco',
+            label: `Preço: ${PRICE_LABELS[faixaPrecoValida] || faixaPrecoValida}`
+        });
+    }
+
     res.render('home', {
         title: 'Todos os Nossos Cursos',
-        courses: coursesData,
-        isFullList: true
+        courses: filteredCourses,
+        isFullList: true,
+        filters: {
+            categoria: categoriaValida,
+            nivel: nivelValido,
+            faixaPreco: faixaPrecoValida,
+            hasActive: Boolean(categoriaValida || nivelValido || faixaPrecoValida)
+        },
+        categoryOptions,
+        levelOptions,
+        priceOptions,
+        activeFilterChips,
+        totalFiltered: filteredCourses.length,
+        totalCourses: coursesData.length
     });
 });
 
@@ -115,24 +233,59 @@ router.get('/product/:id', (req, res) => {
 
 // Rota Carrinho (Conectada com o botão de compra)
 router.get('/carrinho', (req, res) => {
-    // Verifica se veio um ID pela URL (ex: /carrinho?add=iso-9001)
     const addedId = req.query.add;
+    const removeId = req.query.remove;
+    const clearCart = req.query.clear === '1';
+    let cartIds = getCartIds(req);
 
-    let cartItems = [];
-
-    if (addedId) {
-        // Se o usuário clicou em comprar, mostra SÓ aquele curso no carrinho (Simulação)
-        const item = coursesData.find(c => c.id === addedId);
-        if (item) cartItems.push(item);
+    if (clearCart) {
+        cartIds = [];
     }
 
-    // Calcula total
-    const total = cartItems.reduce((acc, item) => acc + item.preco, 0);
+    if (removeId) {
+        cartIds = cartIds.filter((id) => id !== removeId);
+    }
+
+    if (addedId) {
+        const itemExists = coursesData.some((c) => c.id === addedId);
+        if (itemExists) {
+            cartIds.push(addedId);
+        }
+    }
+
+    if (addedId || removeId || clearCart) {
+        saveCartIds(res, cartIds);
+        return res.redirect('/carrinho');
+    }
+
+    const groupedItems = new Map();
+    cartIds.forEach((id) => {
+        const item = coursesData.find((course) => course.id === id);
+        if (!item) return;
+
+        const current = groupedItems.get(id);
+        if (current) {
+            current.quantidade += 1;
+            current.subtotal = roundMoney(current.preco * current.quantidade);
+            return;
+        }
+
+        groupedItems.set(id, {
+            ...item,
+            quantidade: 1,
+            subtotal: roundMoney(item.preco)
+        });
+    });
+
+    const cartItems = Array.from(groupedItems.values());
+
+    const total = cartItems.reduce((acc, item) => acc + item.subtotal, 0);
 
     res.render('carrinho', {
         title: 'Seu Carrinho de Compras',
         cartItems,
         total: total.toFixed(2),
+        totalNumber: roundMoney(total),
         hasItems: cartItems.length > 0
     });
 });
@@ -164,31 +317,28 @@ router.get('/api/pagamentos', (req, res) => {
         moeda: 'BRL',
         formasPagamento: [
             {
-                tipo: 'a_vista',
-                total: roundMoney(valor),
-                valorParcela: roundMoney(valor),
-                acrescimo: 0
-            },
-            {
-                tipo: 'debito',
-                total: roundMoney(valor),
-                valorParcela: roundMoney(valor),
-                acrescimo: 0
-            },
-            {
                 tipo: 'pix',
+                descricao: 'Pagamento via PIX',
+                total: roundMoney(valor),
+                valorParcela: roundMoney(valor),
+                acrescimo: 0
+            },
+            {
+                tipo: 'boleto',
+                descricao: 'Pagamento no boleto',
                 total: roundMoney(valor),
                 valorParcela: roundMoney(valor),
                 acrescimo: 0
             },
             {
                 tipo: 'cartao_credito',
+                descricao: 'Pagamento com cartão de crédito à vista ou parcelado',
                 regras: {
                     semAcrescimoAte: 4,
-                    acrescimoAPartirDe: 6,
+                    acrescimoAPartirDe: 5,
                     maximoParcelas: 10,
                     indiceReajusteMensal: monthlyIndex,
-                    observacao: 'Parcelamento de 5x não é ofertado nesta regra comercial.'
+                    observacao: 'À vista ou até 4x sem juros. De 5x a 10x com juros.'
                 },
                 opcoes: creditOptions
             }

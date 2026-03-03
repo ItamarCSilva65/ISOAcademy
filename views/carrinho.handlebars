@@ -18,7 +18,9 @@
                 <thead>
                     <tr>
                         <th>Curso</th>
+                        <th>Quantidade</th>
                         <th>Preço</th>
+                        <th>Subtotal</th>
                         <th>Ação</th>
                     </tr>
                 </thead>
@@ -32,8 +34,10 @@
                                 <br><small>{{this.titulo_completo}}</small>
                             </div>
                         </td>
+                        <td>{{this.quantidade}}</td>
                         <td>{{formatCurrency this.preco}}</td>
-                        <td><a href="/carrinho" class="btn-remove">Remover</a></td>
+                        <td>{{formatCurrency this.subtotal}}</td>
+                        <td><a href="/carrinho?remove={{this.id}}" class="btn-remove">Remover</a></td>
                     </tr>
                     {{/each}}
                 </tbody>
@@ -50,8 +54,15 @@
                 <span>Total:</span>
                 <span>R$ {{total}}</span>
             </div>
-            <a href="/checkout" class="btn btn-success btn-block" style="margin-bottom: 10px;">Finalizar Compra</a>
+            <button id="showPaymentMethods" class="btn btn-success btn-block cart-action-gap">Finalizar Compra</button>
             <a href="/cursos" class="btn btn-primary btn-block">Ver Cursos</a>
+            <a href="/carrinho?clear=1" class="btn btn-outline-secondary btn-block cart-action-top">Limpar Carrinho</a>
+
+            <div id="paymentMethodsBox" class="payment-methods-box">
+                <h3 class="payment-methods-title">Formas de Pagamento</h3>
+                <div id="paymentMethodsList" class="payment-methods-list"></div>
+                <a href="/checkout" class="btn btn-success btn-block cart-action-top">Ir para pagamento</a>
+            </div>
         </div>
 
         {{else}}
@@ -61,6 +72,85 @@
         </div>
         {{/if}}
     </div>
+
+    {{#if hasItems}}
+    <script>
+        (function () {
+            const button = document.getElementById('showPaymentMethods');
+            const box = document.getElementById('paymentMethodsBox');
+            const list = document.getElementById('paymentMethodsList');
+            const total = Number('{{totalNumber}}') || 0;
+
+            if (!button || !box || !list || total <= 0) return;
+
+            const renderPaymentLines = (formas) => {
+                const cards = [];
+                formas.forEach((forma) => {
+                    if (forma.tipo === 'pix') {
+                        cards.push({
+                            classe: 'payment-card-pix',
+                            icone: '⚡',
+                            titulo: 'PIX',
+                            descricao: 'Pagamento instantâneo com confirmação imediata.'
+                        });
+                    }
+
+                    if (forma.tipo === 'boleto') {
+                        cards.push({
+                            classe: 'payment-card-boleto',
+                            icone: '🧾',
+                            titulo: 'Boleto',
+                            descricao: 'Pagamento no boleto bancário.'
+                        });
+                    }
+
+                    if (forma.tipo === 'cartao_credito' && forma.regras) {
+                        cards.push({
+                            classe: 'payment-card-cartao',
+                            icone: '💳',
+                            titulo: 'Cartão de Crédito — Sem Juros',
+                            descricao: 'À vista ou parcelado em até 4x sem juros.'
+                        });
+                        cards.push({
+                            classe: 'payment-card-cartao',
+                            icone: '💳',
+                            titulo: 'Cartão de Crédito — Com Juros',
+                            descricao: 'Parcelado de 5x até 10x com juros.'
+                        });
+                    }
+                });
+
+                list.innerHTML = cards.map((card) => `
+                    <div class="payment-method-card ${card.classe}">
+                        <div class="payment-icon">${card.icone}</div>
+                        <div>
+                            <div class="payment-card-title">${card.titulo}</div>
+                            <div class="payment-card-desc">${card.descricao}</div>
+                        </div>
+                    </div>
+                `).join('');
+            };
+
+            button.addEventListener('click', async () => {
+                if (box.style.display === 'block') {
+                    box.style.display = 'none';
+                    return;
+                }
+
+                try {
+                    const response = await fetch(`/api/pagamentos?valor=${total}`);
+                    if (!response.ok) throw new Error('Falha ao obter pagamentos');
+                    const data = await response.json();
+                    renderPaymentLines(data.formasPagamento || []);
+                    box.style.display = 'block';
+                } catch (error) {
+                    list.innerHTML = '<div class="payment-load-error">Não foi possível carregar as formas de pagamento agora.</div>';
+                    box.style.display = 'block';
+                }
+            });
+        })();
+    </script>
+    {{/if}}
 
 </body>
 

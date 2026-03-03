@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser')
 const path = require('path')
 const app = express()
 const port = process.env.PORT || 3000
-const SUPPORTED_LANGS = ['pt', 'en', 'fr', 'es']
+const SUPPORTED_LANGS = ['pt', 'en', 'fr', 'es', 'de', 'zh', 'ar', 'ja', 'hi']
 
 // Middlewares
 app.use(cookieParser())
@@ -20,7 +20,7 @@ app.engine('handlebars', exphbs.engine({
         t: (obj, lang) => {
             if (!obj || typeof obj !== 'object') return obj || '';
             if (!lang || !SUPPORTED_LANGS.includes(lang)) lang = 'pt';
-            return obj[lang] || obj['pt'] || '';
+            return obj[lang] || obj['en'] || obj['pt'] || '';
         }
     }
 }));

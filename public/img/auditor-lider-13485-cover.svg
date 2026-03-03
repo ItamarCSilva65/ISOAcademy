@@ -1,0 +1,48 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B2A4A"/>
+      <stop offset="1" stop-color="#1E6A8A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+
+  <circle cx="980" cy="120" r="210" fill="#7AD7F0" fill-opacity="0.12"/>
+  <circle cx="1080" cy="560" r="180" fill="#9EE5F7" fill-opacity="0.10"/>
+
+  <rect x="70" y="70" width="1060" height="535" rx="26" fill="url(#card)" stroke="rgba(255,255,255,0.26)"/>
+
+  <rect x="110" y="110" width="118" height="118" rx="16" fill="#FFFFFF" fill-opacity="0.14"/>
+  <path d="M145 169L164 188L194 152" stroke="#C8F3FF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="260" y="160" fill="#C8F3FF" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">CURSO PROFISSIONAL</text>
+  <text x="110" y="285" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800">Auditor Líder ISO 13485</text>
+  <text x="110" y="340" fill="#EAFBFF" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="500">Sistema de Gestão da Qualidade para Dispositivos Médicos</text>
+
+  <rect x="110" y="390" width="980" height="2" fill="#A7E8F9" fill-opacity="0.45"/>
+
+  <g transform="translate(110 430)">
+    <rect width="300" height="128" rx="14" fill="#FFFFFF" fill-opacity="0.12"/>
+    <text x="24" y="45" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Liderança em Auditoria</text>
+    <text x="24" y="84" fill="#D8F6FF" font-family="Arial, Helvetica, sans-serif" font-size="22">Planejamento, execução e relatório</text>
+  </g>
+
+  <g transform="translate(440 430)">
+    <rect width="300" height="128" rx="14" fill="#FFFFFF" fill-opacity="0.12"/>
+    <text x="24" y="45" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Conformidade Regulatória</text>
+    <text x="24" y="84" fill="#D8F6FF" font-family="Arial, Helvetica, sans-serif" font-size="22">Foco no setor de saúde</text>
+  </g>
+
+  <g transform="translate(770 430)">
+    <rect width="320" height="128" rx="14" fill="#FFFFFF" fill-opacity="0.12"/>
+    <text x="24" y="45" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Certificação e Carreira</text>
+    <text x="24" y="84" fill="#D8F6FF" font-family="Arial, Helvetica, sans-serif" font-size="22">Diferencial no mercado global</text>
+  </g>
+
+  <text x="110" y="615" fill="#C4EEFA" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">ISOAcademy</text>
+</svg>

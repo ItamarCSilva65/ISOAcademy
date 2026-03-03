@@ -1,6 +1,6 @@
 /**
  * ISOAcademy — Sistema de Tradução (i18n)
- * Idiomas: PT (Português), EN (English), FR (Français), ES (Español)
+ * Idiomas: PT, EN, FR, ES, DE, ZH, AR, JA, HI
  * Uso: adicione data-i18n="key" nos elementos HTML.
  */
 
@@ -422,39 +422,424 @@ const translations = {
     }
 };
 
+translations.de = {
+    ...translations.en,
+    nav_home: 'Startseite',
+    nav_free: 'Kostenlose Kurse',
+    nav_all: 'Alle Kurse',
+    nav_incompany: 'Inhouse',
+    nav_highlights: 'Highlights',
+    nav_cart: 'Warenkorb',
+    nav_login: '🔑 Anmelden',
+    nav_language: '🌐 Sprache',
+    hero_title: 'ISO-Normen meistern',
+    hero_sub: 'Bringen Sie Ihre Karriere mit international anerkannten Zertifizierungen voran.',
+    hero_btn: 'Top-Kurse ansehen',
+    sec_highlights: 'Top-Kurse',
+    sec_allcourses: 'Gesamtkatalog',
+    btn_viewall: 'Alle Kurse ansehen',
+    btn_details: 'Details ansehen',
+    btn_addcart: 'In den Warenkorb',
+    badge_bestseller: 'Bestseller',
+    num_title: 'Unsere Zahlen',
+    num_sub: 'Entdecken Sie die Größe unseres Beitrags zur Qualifizierung von Auditoren und Führungskräften in Brasilien.',
+    num_btn: 'Teil dieser Zahlen werden',
+    num_students: 'Absolventen',
+    num_courses: 'Verfügbare Kurse',
+    num_companies: 'Betreute Unternehmen',
+    num_satisfaction: 'Zufriedenheit',
+    dep_title: 'Teilnehmerstimmen',
+    dep_sub: 'Sehen Sie, was unsere Teilnehmer und Unternehmenskunden über ISOAcademy sagen.',
+    dep_btn: 'Werden Sie Teil unserer Geschichte',
+    footer_links: 'Schnellzugriff',
+    footer_contact: 'Kontakt',
+    footer_social: 'Soziale Netzwerke',
+    footer_terms: 'Nutzungsbedingungen',
+    footer_privacy: 'Datenschutzrichtlinie',
+    aside_numbers: 'Zahlen',
+    aside_reviews: 'Bewertungen'
+};
+
+translations.zh = {
+    ...translations.en,
+    nav_home: '首页',
+    nav_free: '免费课程',
+    nav_all: '全部课程',
+    nav_incompany: '企业内训',
+    nav_highlights: '精选课程',
+    nav_cart: '购物车',
+    nav_login: '🔑 登录',
+    nav_language: '🌐 语言',
+    hero_title: '掌握 ISO 标准',
+    hero_sub: '通过国际认可的认证提升您的职业发展。',
+    hero_btn: '查看精选课程',
+    sec_highlights: '精选课程',
+    sec_allcourses: '完整目录',
+    btn_viewall: '查看全部课程',
+    btn_details: '查看详情',
+    btn_addcart: '加入购物车',
+    badge_bestseller: '畅销',
+    num_title: '我们的数据',
+    num_sub: '了解我们在巴西审计员与管理人员职业培养方面的影响力。',
+    num_btn: '加入这些数据',
+    num_students: '毕业学员',
+    num_courses: '可选课程',
+    num_companies: '服务企业',
+    num_satisfaction: '满意度',
+    dep_title: '学员评价',
+    dep_sub: '了解学员和企业客户对 ISOAcademy 的评价。',
+    dep_btn: '加入我们的故事',
+    footer_links: '快速链接',
+    footer_contact: '联系方式',
+    footer_social: '社交媒体',
+    footer_terms: '使用条款',
+    footer_privacy: '隐私政策',
+    aside_numbers: '数据',
+    aside_reviews: '评价'
+};
+
+translations.ar = {
+    ...translations.en,
+    nav_home: 'الرئيسية',
+    nav_free: 'دورات مجانية',
+    nav_all: 'جميع الدورات',
+    nav_incompany: 'تدريب داخل الشركة',
+    nav_highlights: 'الدورات المميزة',
+    nav_cart: 'سلة التسوق',
+    nav_login: '🔑 تسجيل الدخول',
+    nav_language: '🌐 اللغة',
+    hero_title: 'أتقن معايير ISO',
+    hero_sub: 'طوّر مسيرتك المهنية عبر شهادات معترف بها دوليًا.',
+    hero_btn: 'عرض الدورات المميزة',
+    sec_highlights: 'الدورات المميزة',
+    sec_allcourses: 'الكتالوج الكامل',
+    btn_viewall: 'عرض جميع الدورات',
+    btn_details: 'عرض التفاصيل',
+    btn_addcart: 'أضف إلى السلة',
+    badge_bestseller: 'الأكثر مبيعًا',
+    num_title: 'أرقامنا',
+    num_sub: 'اكتشف حجم تأثيرنا في تأهيل المدققين والمديرين المهنيين في البرازيل.',
+    num_btn: 'كن جزءًا من هذه الأرقام',
+    num_students: 'الخريجون',
+    num_courses: 'الدورات المتاحة',
+    num_companies: 'الشركات التي تم خدمتها',
+    num_satisfaction: 'مستوى الرضا',
+    dep_title: 'آراء الطلاب',
+    dep_sub: 'اطّلع على ما يقوله طلابنا وعملاؤنا من الشركات عن ISOAcademy.',
+    dep_btn: 'كن جزءًا من قصتنا',
+    footer_links: 'روابط سريعة',
+    footer_contact: 'اتصل بنا',
+    footer_social: 'وسائل التواصل',
+    footer_terms: 'شروط الاستخدام',
+    footer_privacy: 'سياسة الخصوصية',
+    aside_numbers: 'الأرقام',
+    aside_reviews: 'الآراء'
+};
+
+translations.ja = {
+    ...translations.en,
+    nav_home: 'ホーム',
+    nav_free: '無料コース',
+    nav_all: 'すべてのコース',
+    nav_incompany: '企業向け研修',
+    nav_highlights: '注目コース',
+    nav_cart: 'カート',
+    nav_login: '🔑 ログイン',
+    nav_language: '🌐 言語',
+    hero_title: 'ISO規格をマスターする',
+    hero_sub: '国際的に認められた認証でキャリアを高めましょう。',
+    hero_btn: '注目コースを見る',
+    sec_highlights: '注目コース',
+    sec_allcourses: '全コース一覧',
+    btn_viewall: 'すべてのコースを見る',
+    btn_details: '詳細を見る',
+    btn_addcart: 'カートに追加',
+    badge_bestseller: '人気',
+    num_title: '私たちの実績',
+    num_sub: 'ブラジル全土で監査人や管理職の育成に与えた当社のインパクトをご覧ください。',
+    num_btn: 'この実績の一員になる',
+    num_students: '修了生',
+    num_courses: '提供コース数',
+    num_companies: '支援企業数',
+    num_satisfaction: '満足度',
+    dep_title: '受講者の声',
+    dep_sub: '受講者および法人顧客のISOAcademyへの評価をご覧ください。',
+    dep_btn: '私たちのストーリーに参加する',
+    footer_links: 'クイックリンク',
+    footer_contact: 'お問い合わせ',
+    footer_social: 'SNS',
+    footer_terms: '利用規約',
+    footer_privacy: 'プライバシーポリシー',
+    aside_numbers: '実績',
+    aside_reviews: 'レビュー'
+};
+
+translations.hi = {
+    ...translations.en,
+    nav_home: 'होम',
+    nav_free: 'मुफ्त कोर्स',
+    nav_all: 'सभी कोर्स',
+    nav_incompany: 'इन-कंपनी',
+    nav_highlights: 'मुख्य कोर्स',
+    nav_cart: 'कार्ट',
+    nav_login: '🔑 लॉगिन',
+    nav_language: '🌐 भाषा',
+    hero_title: 'ISO मानकों में महारत हासिल करें',
+    hero_sub: 'अंतरराष्ट्रीय मान्यता प्राप्त प्रमाणपत्रों के साथ अपने करियर को आगे बढ़ाएँ।',
+    hero_btn: 'मुख्य कोर्स देखें',
+    sec_highlights: 'मुख्य कोर्स',
+    sec_allcourses: 'पूरा कैटलॉग',
+    btn_viewall: 'सभी कोर्स देखें',
+    btn_details: 'विवरण देखें',
+    btn_addcart: 'कार्ट में जोड़ें',
+    badge_bestseller: 'बेस्टसेलर',
+    num_title: 'हमारे आँकड़े',
+    num_sub: 'ब्राज़ील में ऑडिटर्स और प्रबंधकों के पेशेवर प्रशिक्षण पर हमारे प्रभाव का पैमाना जानें।',
+    num_btn: 'इन आँकड़ों का हिस्सा बनें',
+    num_students: 'प्रशिक्षित विद्यार्थी',
+    num_courses: 'उपलब्ध कोर्स',
+    num_companies: 'सेवित कंपनियाँ',
+    num_satisfaction: 'संतुष्टि',
+    dep_title: 'विद्यार्थियों की राय',
+    dep_sub: 'देखें कि विद्यार्थी और कॉर्पोरेट ग्राहक ISOAcademy के बारे में क्या कहते हैं।',
+    dep_btn: 'हमारी कहानी का हिस्सा बनें',
+    footer_links: 'त्वरित लिंक',
+    footer_contact: 'संपर्क',
+    footer_social: 'सोशल मीडिया',
+    footer_terms: 'उपयोग की शर्तें',
+    footer_privacy: 'गोपनीयता नीति',
+    aside_numbers: 'आँकड़े',
+    aside_reviews: 'समीक्षाएँ'
+};
+
 // ─── Translation Engine ──────────────────────────────────────────────────────
 
 const LANG_KEY = 'isoacademy_lang';
-const SUPPORTED = ['pt', 'en', 'fr', 'es'];
-const LANG_LABELS = { pt: '🇧🇷 Português', en: '🇺🇸 English', fr: '🇫🇷 Français', es: '🇪🇸 Español' };
+const SUPPORTED = ['pt', 'en', 'fr', 'es', 'de', 'zh', 'ar', 'ja', 'hi'];
+const LANG_LABELS = {
+    pt: '🇧🇷 Português',
+    en: '🇺🇸 English',
+    fr: '🇫🇷 Français',
+    es: '🇪🇸 Español',
+    de: '🇩🇪 Deutsch',
+    zh: '🇨🇳 中文',
+    ar: '🇸🇦 العربية',
+    ja: '🇯🇵 日本語',
+    hi: '🇮🇳 हिन्दी'
+};
+const RTL_LANGS = ['ar'];
+
+const AUTO_TRANSLATIONS_EN = {
+    'Abrir menu': 'Open menu',
+    'Aumentar fonte': 'Increase font',
+    'Diminuir fonte': 'Decrease font',
+    'Alto contraste': 'High contrast',
+    'Sobre Nós': 'About Us',
+    'Nossos Números': 'Our Numbers',
+    'Depoimentos': 'Testimonials',
+    'Especialistas em Normas Internacionais e Certificações ISO para empresas e profissionais focados na excelência e qualidade.': 'Specialists in International Standards and ISO Certifications for companies and professionals focused on excellence and quality.',
+    'Formação profissional em normas internacionais.': 'Professional training in international standards.',
+    'Índice de Aprovação': 'Approval Rate',
+    'Cursos e Especializações': 'Courses and Specializations',
+    'Empresas Parceiras (In Company)': 'Partner Companies (In Company)',
+    'Cursos': 'Courses',
+    'Destaque!': 'Featured!',
+    'Cursos em Destaque': 'Featured Courses',
+    'Os treinamentos mais buscados pelas empresas focadas em certificação de classe mundial.': 'The most sought-after training courses by companies focused on world-class certification.',
+    'Mais Vendido': 'Best Seller',
+    'Ver Detalhes': 'View Details',
+    'Adicionar ao Carrinho': 'Add to Cart',
+    'Nenhum curso em destaque no momento.': 'No featured courses available at the moment.',
+    '📚 Cursos Gratuitos': '📚 Free Courses',
+    'Comece hoje mesmo! Acesse treinamentos introdutórios sobre Normas ISO sem custo algum.': 'Start today! Access introductory training on ISO Standards at no cost.',
+    'Acessar Gratuitamente': 'Access for Free',
+    'Conteúdo 100% Gratuito': '100% Free Content',
+    'Nenhum cartão de crédito necessário. Basta criar sua conta e começar a aprender agora.': 'No credit card required. Just create your account and start learning now.',
+    'Cursos Disponíveis Gratuitamente': 'Courses Available for Free',
+    '🎁 GRÁTIS': '🎁 FREE',
+    'Gratuito': 'Free',
+    'Acessar Agora →': 'Access Now →',
+    'Nenhum curso gratuito disponível no momento.': 'No free courses available at the moment.',
+    'Quer ir além?': 'Want to go further?',
+    'Conheça nosso catálogo completo de certificações ISO com materiais avançados, suporte de instrutores e certificado profissional reconhecido.': 'Discover our complete catalog of ISO certifications with advanced materials, instructor support, and recognized professional certification.',
+    'Ver Catálogo Completo': 'View Full Catalog',
+    'Treinamento In Company': 'In-Company Training',
+    '🏢 Treinamentos In Company': '🏢 In-Company Training',
+    'Cursos ISO personalizados, realizados nas instalações da sua empresa, para toda a equipe.': 'Customized ISO courses delivered at your company premises for the entire team.',
+    '📋 Solicitar Proposta': '📋 Request Proposal',
+    '📚 Ver Catálogo': '📚 View Catalog',
+    'Conteúdo Personalizado': 'Customized Content',
+    'Currículo adaptado à realidade da sua empresa': 'Curriculum adapted to your company reality',
+    'Datas Flexíveis': 'Flexible Dates',
+    'Escolha horários e dias que atendam sua equipe': 'Choose schedules and days that suit your team',
+    'Turmas Exclusivas': 'Exclusive Groups',
+    'Treinamento fechado só para seus colaboradores': 'Closed training only for your collaborators',
+    'Certificação Internacional': 'International Certification',
+    'Reconhecida globalmente pelas normas ISO': 'Globally recognized by ISO standards',
+    'Economia em Escala': 'Economies of Scale',
+    'Mais colaboradores = menor custo por pessoa': 'More collaborators = lower cost per person',
+    'Cursos Disponíveis In Company': 'Courses Available In-Company',
+    'Todos os cursos do nosso catálogo podem ser realizados na modalidade In Company. Consulte nossa equipe para valores personalizados.': 'All courses in our catalog can be delivered in In-Company mode. Contact our team for custom pricing.',
+    'Por que In Company é a melhor escolha?': 'Why is In-Company the best choice?',
+    'Adaptamos o conteúdo de qualquer um de nossos cursos ISO à realidade do seu negócio. Eliminamos o genérico e focamos nos desafios reais da sua equipe.': 'We adapt any of our ISO courses to your business reality. We remove generic content and focus on your team’s real challenges.',
+    'Solicite uma Proposta Personalizada': 'Request a Personalized Proposal',
+    'Nossa equipe retorna em até 24h com uma proposta sob medida.': 'Our team responds within 24 hours with a tailored proposal.',
+    'Nome da Empresa': 'Company Name',
+    'Nome do Responsável': 'Contact Name',
+    'E-mail Corporativo': 'Corporate E-mail',
+    'Qual norma ISO principal?': 'Main ISO Standard?',
+    'Número de Colaboradores': 'Number of Employees',
+    'Mais de uma / Consultoria': 'More than one / Consulting',
+    '5 a 15 colaboradores': '5 to 15 employees',
+    '16 a 50 colaboradores': '16 to 50 employees',
+    '51 a 100 colaboradores': '51 to 100 employees',
+    'Mais de 100 colaboradores': 'More than 100 employees',
+    '🚀 Solicitar Contato Agora': '🚀 Request Contact Now',
+    'Já tenho conta — Fazer Login': 'I already have an account — Log in',
+    'Depoimentos dos Alunos': 'Student Testimonials',
+    'Veja o que nossos alunos e clientes corporativos têm a dizer sobre a ISOAcademy.': 'See what our students and corporate clients have to say about ISOAcademy.',
+    'Anterior': 'Previous',
+    'Próximo': 'Next',
+    'Venha fazer parte da nossa história': 'Come be part of our story',
+    'Conheça a dimensão do nosso impacto na qualificação profissional de auditores e gestores em todo o Brasil.': 'Discover the scale of our impact on the professional qualification of auditors and managers across Brazil.',
+    'Alunos Formados': 'Graduates',
+    'Faça parte destes números': 'Be part of these numbers',
+    'Acessar Minha Conta': 'Access My Account',
+    'Faça login para continuar seus estudos ou visualizar certificados.': 'Log in to continue your studies or view certificates.',
+    'E-mail': 'E-mail',
+    'Senha': 'Password',
+    'Seu e-mail de cadastro': 'Your registered e-mail',
+    'Sua senha': 'Your password',
+    'Esqueci minha senha': 'I forgot my password',
+    'Entrar': 'Sign In',
+    'Criar Conta': 'Create Account',
+    'Cadastre-se para comprar cursos de normas ISO e turbinar seu currículo.': 'Sign up to buy ISO standards courses and boost your resume.',
+    'Nome Completo': 'Full Name',
+    'Ex: João da Silva': 'Ex: John Doe',
+    'Melhor e-mail': 'Best e-mail',
+    'Crie uma senha forte': 'Create a strong password',
+    'Cadastrar e Continuar': 'Sign Up and Continue',
+    'Seu Carrinho de Compras': 'Your Shopping Cart',
+    'Curso': 'Course',
+    'Preço': 'Price',
+    'Ação': 'Action',
+    'Remover': 'Remove',
+    'Resumo do Pedido': 'Order Summary',
+    'Subtotal:': 'Subtotal:',
+    'Total:': 'Total:',
+    'Finalizar Compra': 'Checkout',
+    'Ver Cursos': 'View Courses',
+    'Seu carrinho está vazio.': 'Your cart is empty.',
+    'Compra Finalizada': 'Purchase Completed',
+    'Finalizar Matrícula': 'Complete Enrollment',
+    '1. Dados Pessoais': '1. Personal Data',
+    'Nome Completo:': 'Full Name:',
+    'E-mail para acesso:': 'Access E-mail:',
+    '2. Pagamento (Simulado)': '2. Payment (Simulated)',
+    'Número do Cartão:': 'Card Number:',
+    'Validade:': 'Expiry:',
+    'CVV:': 'CVV:',
+    'Confirmar Pagamento': 'Confirm Payment',
+    '✓ Certificado válido em todo território nacional': '✓ Certificate valid throughout the national territory',
+    '✓ Acesso vitalício às aulas': '✓ Lifetime access to classes',
+    '✓ Material de apoio em PDF': '✓ PDF support material',
+    'Pagamento único. Sem mensalidades.': 'One-time payment. No monthly fees.',
+    'Matricular-se Agora': 'Enroll Now',
+    '← Voltar para a loja': '← Back to store'
+};
+
+function normalizeText(value) {
+    return String(value || '').replace(/\s+/g, ' ').trim();
+}
+
+function getAutoTranslation(text, lang) {
+    const normalized = normalizeText(text);
+    if (!normalized || lang === 'pt') return null;
+    return AUTO_TRANSLATIONS_EN[normalized] || null;
+}
+
+function applyDirection(lang) {
+    const isRtl = RTL_LANGS.includes(lang);
+    document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+}
+
+function applyAutoTextTranslations(lang) {
+    if (!document.body) return;
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+            if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+            const parent = node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            if (parent.closest('[data-i18n], [data-i18n-placeholder], script, style, noscript')) {
+                return NodeFilter.FILTER_REJECT;
+            }
+            return NodeFilter.FILTER_ACCEPT;
+        }
+    });
+
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+    textNodes.forEach(node => {
+        const original = node.nodeValue;
+        const normalized = normalizeText(original);
+        const translated = getAutoTranslation(normalized, lang);
+        if (!translated) return;
+
+        const leading = original.match(/^\s*/)?.[0] || '';
+        const trailing = original.match(/\s*$/)?.[0] || '';
+        node.nodeValue = `${leading}${translated}${trailing}`;
+    });
+
+    ['placeholder', 'title', 'aria-label'].forEach(attr => {
+        document.querySelectorAll(`[${attr}]`).forEach(el => {
+            if (el.hasAttribute('data-i18n') || el.hasAttribute('data-i18n-placeholder')) return;
+            const original = el.getAttribute(attr);
+            const translated = getAutoTranslation(original, lang);
+            if (translated) el.setAttribute(attr, translated);
+        });
+    });
+
+    const translatedTitle = getAutoTranslation(document.title, lang);
+    if (translatedTitle) document.title = translatedTitle;
+}
 
 function getCurrentLang() {
-    return localStorage.getItem(LANG_KEY) || 'pt';
+    const lang = localStorage.getItem(LANG_KEY) || 'pt';
+    return SUPPORTED.includes(lang) ? lang : 'pt';
 }
 
 function applyLang(lang) {
     if (!SUPPORTED.includes(lang)) lang = 'pt';
     const dict = translations[lang];
+    const fallback = translations.pt;
     if (!dict) return;
 
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (dict[key] !== undefined) {
-            el.innerHTML = dict[key];
+        const value = dict[key] !== undefined ? dict[key] : fallback[key];
+        if (value !== undefined) {
+            el.innerHTML = value;
         }
     });
 
     // Update placeholder attributes
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
-        if (dict[key] !== undefined) {
-            el.setAttribute('placeholder', dict[key]);
+        const value = dict[key] !== undefined ? dict[key] : fallback[key];
+        if (value !== undefined) {
+            el.setAttribute('placeholder', value);
         }
     });
 
     // Update document lang attribute
     document.documentElement.setAttribute('lang', lang);
+    applyDirection(lang);
+
+    // Translate hardcoded strings not yet mapped with data-i18n (global fallback)
+    applyAutoTextTranslations(lang);
 
     // Persist in localStorage AND as a cookie (for server-side rendering)
     localStorage.setItem(LANG_KEY, lang);
