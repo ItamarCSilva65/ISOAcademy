@@ -85,6 +85,15 @@ body.high-contrast .course-card {
     border: 1px solid #ffff00;
 }
 
+body.high-contrast .btn:hover,
+body.high-contrast .btn:focus,
+body.high-contrast button:hover,
+body.high-contrast button:focus {
+    background-color: #d1d5db !important;
+    border-color: #d1d5db !important;
+    color: #111 !important;
+}
+
 a {
     text-decoration: none;
     color: inherit;
