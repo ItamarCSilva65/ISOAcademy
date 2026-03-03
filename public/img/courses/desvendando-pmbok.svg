@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1030" cy="96" r="220" fill="#ffffff" fill-opacity="0.09"/>
+  <circle cx="930" cy="640" r="210" fill="#ffffff" fill-opacity="0.08"/>
+
+  <rect x="64" y="64" width="1072" height="547" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.25"/>
+
+  <rect x="104" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.18"/>
+  <text x="244" y="136" fill="#E6F8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">PROJETOS</text>
+
+  <text x="104" y="258" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="800">Curso Desvendando o PMBOK</text>
+  
+
+  <text x="104" y="414" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="500">Guia PMBOK na Prática</text>
+
+  <rect x="104" y="458" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
+
+  <text x="104" y="540" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
+  <text x="104" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
+
+  <text x="1096" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">desvendando-pmbok</text>
+</svg>

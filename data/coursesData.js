@@ -543,10 +543,12 @@ const COURSE_IMAGE_BY_ID = {
 const coursesWithMeta = courses.map((courseItem) => {
     const category = inferCategory(courseItem.id);
     const level = inferLevel(courseItem.id, courseItem.preco);
+    const isNewCourse = !courseItem.id.startsWith('iso-');
+    const generatedLocalCover = `/img/courses/${courseItem.id}.svg`;
 
     return {
         ...courseItem,
-        img: COURSE_IMAGE_BY_ID[courseItem.id] || courseItem.img,
+        img: isNewCourse ? generatedLocalCover : (COURSE_IMAGE_BY_ID[courseItem.id] || courseItem.img),
         categoria: category,
         nivel: level,
         tags: buildTags(courseItem.id, category, level)
