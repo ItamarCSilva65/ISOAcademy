@@ -2,8 +2,8 @@
 <svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1F2937"/>
-      <stop offset="1" stop-color="#14B8A6"/>
+      <stop stop-color="#164E63"/>
+      <stop offset="1" stop-color="#0891B2"/>
     </linearGradient>
   </defs>
 
@@ -13,6 +13,16 @@
 
   <rect x="64" y="64" width="1072" height="547" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.25"/>
 
+  <rect x="730" y="120" width="390" height="360" rx="20" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>
+      <rect x="790" y="184" width="280" height="178" rx="12" fill="#EEF3FF" fill-opacity="0.30"/>
+      <line x1="930" y1="204" x2="930" y2="342" stroke="#D8E2FF" stroke-width="4"/>
+      <line x1="810" y1="273" x2="1050" y2="273" stroke="#D8E2FF" stroke-width="4"/>
+      <text x="838" y="242" fill="#D8E2FF" font-family="Arial" font-size="28" font-weight="700">S</text>
+      <text x="992" y="242" fill="#D8E2FF" font-family="Arial" font-size="28" font-weight="700">O</text>
+      <text x="838" y="318" fill="#D8E2FF" font-family="Arial" font-size="28" font-weight="700">W</text>
+      <text x="992" y="318" fill="#D8E2FF" font-family="Arial" font-size="28" font-weight="700">T</text>
+      <rect x="768" y="384" width="320" height="52" rx="12" fill="#EEF3FF" fill-opacity="0.16"/>
+
   <rect x="104" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.18"/>
   <text x="244" y="136" fill="#E6F8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">PROCESSOS</text>
 
@@ -21,10 +31,12 @@
 
   <text x="104" y="414" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="500">Análise de Contexto e Partes Interessadas</text>
 
-  <rect x="104" y="458" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
+  <text x="104" y="458" fill="#E8FBFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600">Cenário: Leitura de cenário, contexto e partes interessadas</text>
 
-  <text x="104" y="540" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
-  <text x="104" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
+  <rect x="104" y="492" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
 
-  <text x="1096" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">contexto-organizacao</text>
+  <text x="104" y="548" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
+  <text x="104" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
+
+  <text x="1096" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">contexto-organizacao</text>
 </svg>

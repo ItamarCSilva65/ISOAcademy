@@ -3,7 +3,7 @@
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
       <stop stop-color="#164E63"/>
-      <stop offset="1" stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#0891B2"/>
     </linearGradient>
   </defs>
 
@@ -13,6 +13,16 @@
 
   <rect x="64" y="64" width="1072" height="547" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.25"/>
 
+  <rect x="730" y="120" width="390" height="360" rx="20" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>
+      <rect x="780" y="190" width="90" height="52" rx="10" fill="#E5F8FF" fill-opacity="0.30"/>
+      <rect x="930" y="190" width="120" height="52" rx="10" fill="#E5F8FF" fill-opacity="0.30"/>
+      <rect x="855" y="282" width="150" height="52" rx="10" fill="#E5F8FF" fill-opacity="0.30"/>
+      <path d="M870 216H930M995 242V282M930 308H855" stroke="#C9F1FF" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="922,210 940,216 922,222" fill="#C9F1FF"/>
+      <polygon points="989,274 995,292 1001,274" fill="#C9F1FF"/>
+      <polygon points="863,302 845,308 863,314" fill="#C9F1FF"/>
+      <rect x="768" y="350" width="320" height="86" rx="12" fill="#E5F8FF" fill-opacity="0.16"/>
+
   <rect x="104" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.18"/>
   <text x="244" y="136" fill="#E6F8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">PROCESSOS</text>
 
@@ -21,10 +31,12 @@
 
   <text x="104" y="414" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="500">Modelagem e Mapeamento de Fluxos</text>
 
-  <rect x="104" y="458" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
+  <text x="104" y="458" fill="#E8FBFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600">Cenário: Mapeamento visual de fluxos ponta a ponta</text>
 
-  <text x="104" y="540" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
-  <text x="104" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
+  <rect x="104" y="492" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
 
-  <text x="1096" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">mapeamento-processo</text>
+  <text x="104" y="548" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
+  <text x="104" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
+
+  <text x="1096" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">mapeamento-processo</text>
 </svg>

@@ -548,7 +548,7 @@ const coursesWithMeta = courses.map((courseItem) => {
 
     return {
         ...courseItem,
-        img: isNewCourse ? generatedLocalCover : (COURSE_IMAGE_BY_ID[courseItem.id] || courseItem.img),
+        img: generatedLocalCover,
         categoria: category,
         nivel: level,
         tags: buildTags(courseItem.id, category, level)

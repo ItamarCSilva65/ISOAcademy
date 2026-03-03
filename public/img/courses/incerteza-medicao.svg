@@ -2,8 +2,8 @@
 <svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#172554"/>
-      <stop offset="1" stop-color="#0369A1"/>
+      <stop stop-color="#0C4A6E"/>
+      <stop offset="1" stop-color="#0284C7"/>
     </linearGradient>
   </defs>
 
@@ -13,6 +13,16 @@
 
   <rect x="64" y="64" width="1072" height="547" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.25"/>
 
+  <rect x="730" y="120" width="390" height="360" rx="20" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>
+      <rect x="768" y="336" width="320" height="104" rx="12" fill="#EEF9FF" fill-opacity="0.16"/>
+      <circle cx="846" cy="240" r="54" fill="#DAF3FF" fill-opacity="0.28"/>
+      <circle cx="846" cy="240" r="30" fill="#C7EBFF" fill-opacity="0.46"/>
+      <line x1="846" y1="240" x2="874" y2="218" stroke="#B9E6FF" stroke-width="5"/>
+      <rect x="930" y="190" width="132" height="120" rx="10" fill="#DAF3FF" fill-opacity="0.26"/>
+      <line x1="954" y1="224" x2="1036" y2="224" stroke="#BFE9FF" stroke-width="5"/>
+      <line x1="954" y1="252" x2="1020" y2="252" stroke="#BFE9FF" stroke-width="5"/>
+      <line x1="954" y1="280" x2="1002" y2="280" stroke="#BFE9FF" stroke-width="5"/>
+
   <rect x="104" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.18"/>
   <text x="244" y="136" fill="#E6F8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">LABORATÓRIO</text>
 
@@ -21,10 +31,12 @@
 
   <text x="104" y="414" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="500">Fundamentos e Cálculo de Incerteza</text>
 
-  <rect x="104" y="458" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
+  <text x="104" y="458" fill="#E8FBFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600">Cenário: Cálculo e interpretação de incerteza de medição</text>
 
-  <text x="104" y="540" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
-  <text x="104" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
+  <rect x="104" y="492" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
 
-  <text x="1096" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">incerteza-medicao</text>
+  <text x="104" y="548" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
+  <text x="104" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
+
+  <text x="1096" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">incerteza-medicao</text>
 </svg>

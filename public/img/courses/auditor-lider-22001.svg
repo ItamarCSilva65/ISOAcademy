@@ -2,8 +2,8 @@
 <svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3F3F46"/>
-      <stop offset="1" stop-color="#0F766E"/>
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
     </linearGradient>
   </defs>
 
@@ -13,6 +13,14 @@
 
   <rect x="64" y="64" width="1072" height="547" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.25"/>
 
+  <rect x="730" y="120" width="390" height="360" rx="20" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>
+      <rect x="768" y="340" width="320" height="98" rx="12" fill="#ECFFEF" fill-opacity="0.16"/>
+      <ellipse cx="840" cy="240" rx="46" ry="62" fill="#D9FCDD" fill-opacity="0.35"/>
+      <ellipse cx="840" cy="255" rx="16" ry="26" fill="#C6F8CD" fill-opacity="0.6"/>
+      <circle cx="954" cy="250" r="54" fill="#D9FCDD" fill-opacity="0.28"/>
+      <path d="M954 220C965 220 975 230 975 241C975 260 954 280 954 280C954 280 933 260 933 241C933 230 943 220 954 220Z" fill="#C6F8CD" fill-opacity="0.7"/>
+      <rect x="1020" y="190" width="42" height="120" rx="8" fill="#D9FCDD" fill-opacity="0.28"/>
+
   <rect x="104" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.18"/>
   <text x="244" y="136" fill="#E6F8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">AUDITORIA LÍDER</text>
 
@@ -21,10 +29,12 @@
 
   <text x="104" y="414" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="500">Formação de Auditor Líder em Segurança de Alimentos</text>
 
-  <rect x="104" y="458" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
+  <text x="104" y="458" fill="#E8FBFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600">Cenário: Auditor líder em planta de segurança de alimentos</text>
 
-  <text x="104" y="540" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
-  <text x="104" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
+  <rect x="104" y="492" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
 
-  <text x="1096" y="578" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">auditor-lider-22001</text>
+  <text x="104" y="548" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
+  <text x="104" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
+
+  <text x="1096" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">auditor-lider-22001</text>
 </svg>

@@ -2,8 +2,8 @@
 <svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0F172A"/>
-      <stop offset="1" stop-color="#0369A1"/>
+      <stop stop-color="#0B2A4A"/>
+      <stop offset="1" stop-color="#1E40AF"/>
     </linearGradient>
   </defs>
 
@@ -24,19 +24,19 @@
       <line x1="940" y1="266" x2="1000" y2="266" stroke="#CFF3FF" stroke-width="5"/>
 
   <rect x="104" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.18"/>
-  <text x="244" y="136" fill="#E6F8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">AUDITORIA INTERNA</text>
+  <text x="244" y="136" fill="#E6F8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">NORMAS ISO</text>
 
-  <text x="104" y="258" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="800">Curso Auditor Interno ISO 13485</text>
+  <text x="104" y="258" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="800">ISO 13485:2016</text>
   
 
-  <text x="104" y="414" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="500">Formação de Auditor Interno para Dispositivos Médicos</text>
+  <text x="104" y="414" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="500">Sistema de Gestão da Qualidade para Dispositivos Médicos</text>
 
-  <text x="104" y="458" fill="#E8FBFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600">Cenário: Auditoria interna em ambiente regulado de saúde</text>
+  <text x="104" y="458" fill="#E8FBFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600">Cenário: Qualidade e rastreabilidade para dispositivos médicos</text>
 
   <rect x="104" y="492" width="992" height="2" fill="#ffffff" fill-opacity="0.35"/>
 
   <text x="104" y="548" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">ISOAcademy</text>
   <text x="104" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="24">Especialização em Normas e Sistemas de Gestão</text>
 
-  <text x="1096" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">auditor-interno-13485</text>
+  <text x="1096" y="586" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="end">iso-13485</text>
 </svg>
