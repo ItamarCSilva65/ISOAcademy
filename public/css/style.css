@@ -65,33 +65,24 @@ body.high-contrast {
     --bg-light: #000;
     --text-dark: #fff;
     --text-light: #fff;
-    --accent-color: #ffff00;
+    --accent-color: #7dd3fc;
 }
 
 body.high-contrast * {
-    border-color: #ffff00 !important;
+    border-color: #7dd3fc !important;
     color: #fff !important;
 }
 
 body.high-contrast .main-header,
 body.high-contrast .main-footer {
     background-color: #000;
-    border-top: 1px solid #ffff00;
-    border-bottom: 1px solid #ffff00;
+    border-top: 1px solid #7dd3fc;
+    border-bottom: 1px solid #7dd3fc;
 }
 
 body.high-contrast .course-card {
     background-color: #111;
-    border: 1px solid #ffff00;
-}
-
-body.high-contrast .btn:hover,
-body.high-contrast .btn:focus,
-body.high-contrast button:hover,
-body.high-contrast button:focus {
-    background-color: #d1d5db !important;
-    border-color: #d1d5db !important;
-    color: #111 !important;
+    border: 1px solid #7dd3fc;
 }
 
 a {
