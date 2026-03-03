@@ -5,11 +5,21 @@
       <stop stop-color="#1E3A8A"/>
       <stop offset="1" stop-color="#0EA5E9"/>
     </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(248 190) rotate(28) scale(460 300)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    </pattern>
   </defs>
 
   <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <ellipse cx="242" cy="194" rx="420" ry="280" fill="url(#glow)"/>
   <circle cx="1030" cy="96" r="220" fill="#ffffff" fill-opacity="0.09"/>
   <circle cx="930" cy="640" r="210" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="860" y="-60" width="420" height="420" rx="210" fill="#ffffff" fill-opacity="0.06" transform="rotate(8 860 -60)"/>
 
   <rect x="64" y="64" width="1072" height="547" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.25"/>
 
@@ -25,7 +35,10 @@
   <rect x="104" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.18"/>
   <text x="244" y="136" fill="#E6F8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">INTRODUÇÃO</text>
 
-  <text x="104" y="258" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="800">Curso Introdução à ISO 37001</text>
+  <rect x="404" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.14"/>
+  <text x="544" y="136" fill="#F1FBFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">NÍVEL BÁSICO</text>
+
+  <text x="104" y="258" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800">Curso Introdução à ISO 37001</text>
   
 
   <text x="104" y="414" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="500">Fundamentos de Sistema Antissuborno</text>

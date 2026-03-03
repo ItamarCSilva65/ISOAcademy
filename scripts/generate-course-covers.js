@@ -139,6 +139,22 @@ function toLine2(title) {
   return words.slice(half).join(' ');
 }
 
+function titleFontSize(line) {
+  if (!line) return 66;
+  if (line.length > 34) return 50;
+  if (line.length > 28) return 56;
+  return 64;
+}
+
+function levelLabel(level) {
+  const labels = {
+    basico: 'NÍVEL BÁSICO',
+    intermediario: 'NÍVEL INTERMEDIÁRIO',
+    avancado: 'NÍVEL AVANÇADO'
+  };
+  return labels[level] || 'FORMAÇÃO PROFISSIONAL';
+}
+
 function sceneSVG(type) {
   const basePanel = `<rect x="730" y="120" width="390" height="360" rx="20" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>`;
 
@@ -181,6 +197,18 @@ function sceneSVG(type) {
       <circle cx="1045" cy="248" r="34" fill="#D2F4FF" fill-opacity="0.28"/>
       <line x1="1031" y1="248" x2="1059" y2="248" stroke="#BFEFFF" stroke-width="6"/>
       <line x1="1045" y1="234" x2="1045" y2="262" stroke="#BFEFFF" stroke-width="6"/>`,
+
+    envAudit: `${basePanel}
+      <rect x="768" y="338" width="320" height="102" rx="12" fill="#E8FFE8" fill-opacity="0.17"/>
+      <circle cx="832" cy="236" r="52" fill="#D6FDD6" fill-opacity="0.30"/>
+      <path d="M832 204C852 204 868 220 868 240C868 272 832 298 832 298C832 298 796 272 796 240C796 220 812 204 832 204Z" fill="#BFF4C3" fill-opacity="0.76"/>
+      <path d="M832 218V286" stroke="#93E3A1" stroke-width="6"/>
+      <path d="M832 244C852 242 862 232 872 218" stroke="#93E3A1" stroke-width="5" stroke-linecap="round"/>
+      <path d="M832 258C812 254 800 246 790 234" stroke="#93E3A1" stroke-width="5" stroke-linecap="round"/>
+      <rect x="928" y="188" width="132" height="118" rx="10" fill="#D6FDD6" fill-opacity="0.24"/>
+      <line x1="952" y1="222" x2="1036" y2="222" stroke="#B0EEBC" stroke-width="5"/>
+      <line x1="952" y1="248" x2="1024" y2="248" stroke="#B0EEBC" stroke-width="5"/>
+      <line x1="952" y1="274" x2="1008" y2="274" stroke="#B0EEBC" stroke-width="5"/>`,
 
     foodAudit: `${basePanel}
       <rect x="768" y="340" width="320" height="98" rx="12" fill="#ECFFEF" fill-opacity="0.16"/>
@@ -360,6 +388,9 @@ function createCover(course) {
   const secondLine = truncate(toLine2(title), 42);
   const scene = COURSE_SCENES[course.id] || { type: 'officeAudit', label: 'Aplicação prática orientada por resultados' };
   const sceneLabel = truncate(scene.label, 64);
+  const level = levelLabel(course.nivel);
+  const firstLineSize = titleFontSize(firstLine);
+  const secondLineSize = secondLine ? Math.max(titleFontSize(secondLine) - 4, 44) : 0;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -368,11 +399,21 @@ function createCover(course) {
       <stop stop-color="${c1}"/>
       <stop offset="1" stop-color="${c2}"/>
     </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(248 190) rotate(28) scale(460 300)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    </pattern>
   </defs>
 
   <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <ellipse cx="242" cy="194" rx="420" ry="280" fill="url(#glow)"/>
   <circle cx="1030" cy="96" r="220" fill="#ffffff" fill-opacity="0.09"/>
   <circle cx="930" cy="640" r="210" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="860" y="-60" width="420" height="420" rx="210" fill="#ffffff" fill-opacity="0.06" transform="rotate(8 860 -60)"/>
 
   <rect x="64" y="64" width="1072" height="547" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.25"/>
 
@@ -381,8 +422,11 @@ function createCover(course) {
   <rect x="104" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.18"/>
   <text x="244" y="136" fill="#E6F8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">${esc(tag)}</text>
 
-  <text x="104" y="258" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="800">${esc(firstLine)}</text>
-  ${secondLine ? `<text x="104" y="328" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="700">${esc(secondLine)}</text>` : ''}
+  <rect x="404" y="102" width="280" height="52" rx="26" fill="#ffffff" fill-opacity="0.14"/>
+  <text x="544" y="136" fill="#F1FBFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">${esc(level)}</text>
+
+  <text x="104" y="258" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="${firstLineSize}" font-weight="800">${esc(firstLine)}</text>
+  ${secondLine ? `<text x="104" y="328" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="${secondLineSize}" font-weight="700">${esc(secondLine)}</text>` : ''}
 
   <text x="104" y="414" fill="#D7F3FF" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="500">${esc(truncate(subtitle, 58))}</text>
 
