@@ -89,7 +89,7 @@ const courses = [
         titulo: 'Gestão de Riscos — Diretrizes',
         preco: 329.90,
         desc: 'Aplique gestão de riscos em decisões estratégicas e operacionais para aumentar resiliência organizacional.',
-        img: '/img/iso-31000-cover-v2.svg',
+        img: '/img/iso-31000-cover-v2.png',
         destaque: true
     }),
 
@@ -504,7 +504,7 @@ const COURSE_IMAGE_BY_ID = {
 
     'auditor-lider-9001': 'https://source.unsplash.com/1600x900/?executive,boardroom,audit&sig=621',
     'auditor-lider-14001': 'https://source.unsplash.com/1600x900/?corporate,meeting,sustainability&sig=622',
-    'auditor-lider-13485': '/img/auditor-lider-13485-cover.svg',
+    'auditor-lider-13485': '/img/auditor-lider-13485-cover.png',
     'auditor-lider-17025': 'https://source.unsplash.com/1600x900/?executive,quality,laboratory-management&sig=624',
     'auditor-lider-22001': 'https://source.unsplash.com/1600x900/?corporate,food-industry,management&sig=625',
     'auditor-lider-31000': 'https://source.unsplash.com/1600x900/?executive,risk-management,conference&sig=626',
@@ -544,7 +544,7 @@ const coursesWithMeta = courses.map((courseItem) => {
     const category = inferCategory(courseItem.id);
     const level = inferLevel(courseItem.id, courseItem.preco);
     const isNewCourse = !courseItem.id.startsWith('iso-');
-    const generatedLocalCover = `/img/courses/${courseItem.id}.svg`;
+    const generatedLocalCover = `/img/courses/${courseItem.id}.png`;
 
     return {
         ...courseItem,

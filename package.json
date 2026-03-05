@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests configured\"",
     "dev": "nodemon ./index.js",
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "build": "echo \"Build step not required\"",
+    "covers:photos": "node ./scripts/download-course-photos.js",
+    "covers:build": "node ./scripts/generate-course-covers.js"
+  },
+  "engines": {
+    "node": "20.x"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +20,8 @@
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
-    "express-handlebars": "^8.0.5"
+    "express-handlebars": "^8.0.5",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
