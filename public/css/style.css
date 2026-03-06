@@ -169,6 +169,45 @@ body.high-contrast .filter-chip {
     border-color: #9fb8aa !important;
 }
 
+body.high-contrast #langDropdownBtn {
+    background: #0f172a !important;
+    color: #ffffff !important;
+    border-color: #87ceeb !important;
+}
+
+body.high-contrast #langDropdownBtn:hover,
+body.high-contrast #langDropdownBtn:focus {
+    background: #1e293b !important;
+    color: #ffffff !important;
+}
+
+body.high-contrast .dropdown-menu {
+    background: #0b1220 !important;
+    border: 1px solid #87ceeb !important;
+}
+
+body.high-contrast .dropdown-menu .dropdown-item,
+body.high-contrast .dropdown-menu .lang-option {
+    color: #f8fafc !important;
+    background: transparent !important;
+}
+
+body.high-contrast .dropdown-menu .dropdown-item:hover,
+body.high-contrast .dropdown-menu .dropdown-item:focus,
+body.high-contrast .dropdown-menu .lang-option:hover,
+body.high-contrast .dropdown-menu .lang-option:focus {
+    background: #1e3a56 !important;
+    color: #ffffff !important;
+}
+
+body.high-contrast .dropdown-menu .dropdown-item.active,
+body.high-contrast .dropdown-menu .dropdown-item:active,
+body.high-contrast .dropdown-menu .lang-option.active,
+body.high-contrast .dropdown-menu .lang-option:active {
+    background: #2563eb !important;
+    color: #ffffff !important;
+}
+
 a {
     text-decoration: none;
     color: inherit;
