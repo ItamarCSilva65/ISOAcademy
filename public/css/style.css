@@ -441,17 +441,35 @@ body.high-contrast .numbers-soft-page .btn-primary,
 body.high-contrast .testimonials-soft-page .btn-primary,
 body.high-contrast .cart-soft-page .btn-primary,
 body.high-contrast .cart-soft-page .btn-success {
-    background: #204e3a !important;
+    background: #133425 !important;
     color: #ffffff !important;
-    border-color: #204e3a !important;
+    border-color: #133425 !important;
 }
 
 body.high-contrast .about-soft-page .btn-outline-primary,
 body.high-contrast .testimonials-soft-page .btn-outline-secondary,
 body.high-contrast .cart-soft-page .btn-outline-secondary {
-    background: #ffffff !important;
-    color: #1f3a2d !important;
-    border-color: #8bb29c !important;
+    background: #eaf4ee !important;
+    color: #0f2b1f !important;
+    border-color: #5f8f78 !important;
+}
+
+body.high-contrast .side-nav-link {
+    background: #102a1f !important;
+    color: #f8fffb !important;
+    border: 1px solid #2d5b46 !important;
+}
+
+body.high-contrast .side-nav-link:hover,
+body.high-contrast .side-nav-link:focus {
+    background: #194432 !important;
+    color: #ffffff !important;
+    border-color: #4a8067 !important;
+}
+
+body.high-contrast .side-nav-label,
+body.high-contrast .side-nav-icon {
+    color: #f8fffb !important;
 }
 
 /* --- Aside / Side Nav --- */
