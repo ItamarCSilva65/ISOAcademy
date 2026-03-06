@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amostra de Variações do Verde</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #f3f5f4;
+      color: #1f2937;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+    }
+
+    p {
+      margin: 0 0 18px;
+      color: #374151;
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .chip {
+      background: #fff;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+
+    .row {
+      margin-bottom: 24px;
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .row h2 {
+      margin: 0;
+      padding: 10px 12px;
+      background: #f8faf9;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .panel {
+      border-right: 1px solid #e5e7eb;
+    }
+
+    .panel:last-child {
+      border-right: none;
+    }
+
+    .panel-title {
+      margin: 0;
+      padding: 8px 10px;
+      font-size: 13px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e5e7eb;
+      color: #334155;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    iframe {
+      width: 100%;
+      height: 520px;
+      border: 0;
+      background: white;
+    }
+
+    @media (max-width: 1100px) {
+      .grid,
+      .legend {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .panel:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Comparativo lado a lado — Variações do verde</h1>
+  <p>Esquerda: <strong>Mais clara</strong> | Direita: <strong>Mais sóbria</strong>. Compare leitura, conforto visual e destaque.</p>
+
+  <div class="legend">
+    <div class="chip"><strong>Variação mais clara:</strong> verde mais leve e arejado.</div>
+    <div class="chip"><strong>Variação mais sóbria:</strong> verde mais corporativo e elegante.</div>
+  </div>
+
+  <section class="row">
+    <h2>Carrinho</h2>
+    <div class="grid">
+      <div class="panel">
+        <div class="panel-title">Mais clara</div>
+        <iframe src="/carrinho?v=clara" title="Carrinho - clara"></iframe>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Mais sóbria</div>
+        <iframe src="/carrinho?v=sobria" title="Carrinho - sobria"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2>Sobre nós</h2>
+    <div class="grid">
+      <div class="panel">
+        <div class="panel-title">Mais clara</div>
+        <iframe src="/sobre_nos?v=clara" title="Sobre nós - clara"></iframe>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Mais sóbria</div>
+        <iframe src="/sobre_nos?v=sobria" title="Sobre nós - sobria"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2>Números</h2>
+    <div class="grid">
+      <div class="panel">
+        <div class="panel-title">Mais clara</div>
+        <iframe src="/nossos_numeros?v=clara" title="Números - clara"></iframe>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Mais sóbria</div>
+        <iframe src="/nossos_numeros?v=sobria" title="Números - sobria"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2>Depoimentos</h2>
+    <div class="grid">
+      <div class="panel">
+        <div class="panel-title">Mais clara</div>
+        <iframe src="/depoimentos?v=clara" title="Depoimentos - clara"></iframe>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Mais sóbria</div>
+        <iframe src="/depoimentos?v=sobria" title="Depoimentos - sobria"></iframe>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

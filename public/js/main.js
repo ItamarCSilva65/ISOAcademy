@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const variantParam = (queryParams.get('v') || '').toLowerCase();
+
+    if (variantParam === 'clara') {
+        document.body.classList.add('variant-green-clear');
+    }
+
+    if (variantParam === 'sobria') {
+        document.body.classList.add('variant-green-sober');
+    }
+
     // ---- Acessibilidade: Fonte e Contraste ----
     const btnIncrease = document.getElementById('fontIncrease');
     const btnDecrease = document.getElementById('fontDecrease');
