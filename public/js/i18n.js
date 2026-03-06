@@ -36,6 +36,9 @@ const translations = {
         num_sub: 'Conheça a dimensão do nosso impacto na qualificação profissional de auditores e gestores em todo o Brasil.',
         num_btn: 'Faça parte destes números',
         num_students: 'Alunos Formados',
+        num_approval: 'Índice de Aprovação',
+        num_specializations: 'Cursos e Especializações',
+        num_partners: 'Empresas Parceiras (In Company)',
         num_courses: 'Cursos Disponíveis',
         num_companies: 'Empresas Atendidas',
         num_satisfaction: 'Satisfação',
@@ -43,7 +46,41 @@ const translations = {
         // Depoimentos
         dep_title: 'Depoimentos dos Alunos',
         dep_sub: 'Veja o que nossos alunos e clientes corporativos têm a dizer sobre a ISOAcademy.',
+        dep_prev: 'Anterior',
+        dep_next: 'Próximo',
         dep_btn: 'Venha fazer parte da nossa história',
+
+        // Sobre nós
+        about_tag: 'Quem somos',
+        about_title: 'Formando Especialistas em Normas ISO desde 2010',
+        about_lead: 'A ISOAcademy nasceu com um propósito claro: tornar o conhecimento sobre Normas Internacionais acessível, prático e transformador para profissionais e empresas em todo o Brasil.',
+        about_history_title: 'Nossa História',
+        about_history_p1: 'Fundada em São Paulo em 2010, a ISOAcademy surgiu da visão de consultores e auditores certificados que perceberam uma lacuna no mercado: faltavam cursos de qualidade, práticos e acessíveis em Normas ISO.',
+        about_history_p2: 'Em mais de 15 anos de atuação, capacitamos mais de 12.000 profissionais e atendemos 850+ empresas em projetos de treinamento In Company, consolidando-nos como referência nacional em qualidade, meio ambiente, saúde e segurança ocupacional.',
+        about_history_p3: 'Hoje, combinamos metodologia presencial e EAD para oferecer a melhor experiência de aprendizagem, com certificação reconhecida internacionalmente.',
+        about_mission_title: 'Missão',
+        about_mission_text: 'Capacitar profissionais e organizações para implementar, auditar e melhorar sistemas de gestão baseados nas Normas ISO, impulsionando a excelência operacional.',
+        about_vision_title: 'Visão',
+        about_vision_text: 'Ser a principal escola de formação em normas ISO da América Latina, reconhecida pela qualidade do ensino e pelo impacto real na carreira de nossos alunos.',
+        about_values_title: 'Valores',
+        about_val1: '✔ Excelência técnica',
+        about_val2: '✔ Compromisso com o aluno',
+        about_val3: '✔ Transparência e ética',
+        about_val4: '✔ Inovação contínua',
+        about_val5: '✔ Impacto real',
+        about_team_title: 'Nossa Equipe',
+        about_role_founder: 'Fundador & Lead Auditor',
+        about_team_carlos: 'Auditor ISO 9001 / 14001 / 45001, com 20 anos de experiência em multinacionais e consultorias.',
+        about_role_director: 'Diretora Pedagógica',
+        about_team_ana: 'Especialista em design instrucional e e-learning. Responsável pela metodologia de todos os cursos.',
+        about_role_inco: 'Gerente de In Company',
+        about_team_ricardo: 'Especialista em treinamentos corporativos customizados para indústria, saúde e laboratórios.',
+        about_cta_title: 'Pronto para evoluir na sua carreira?',
+        about_cta_sub: 'Explore nosso catálogo de cursos ISO e comece sua jornada de certificação hoje mesmo.',
+        about_cta_catalog: '📚 Ver Catálogo de Cursos',
+        about_cta_inco: '🏢 Treinamento In Company',
+        about_aside_numbers: '📊 Em Números',
+        about_aside_certs: '🏅 Certificações Oferecidas',
 
         // In Company
         ic_title: '🏢 Treinamentos In Company',
@@ -80,14 +117,43 @@ const translations = {
         // Carrinho
         cart_title: 'Seu Carrinho de Compras',
         cart_course: 'Curso',
+        cart_quantity: 'Quantidade',
         cart_price: 'Preço',
         cart_action: 'Ação',
+        cart_subtotal_label: 'Subtotal',
+        cart_summary_title: 'Resumo do Pedido',
         cart_subtotal: 'Subtotal:',
         cart_total: 'Total:',
         cart_checkout: 'Finalizar Compra',
+        cart_go_payment: 'Ir para pagamento',
+        cart_payment_methods: 'Formas de Pagamento',
+        cart_clear: 'Limpar Carrinho',
         cart_viewcourses: 'Ver Cursos',
         cart_remove: 'Remover',
         cart_empty: 'Seu carrinho está vazio.',
+
+        pm_pix_title: 'PIX',
+        pm_pix_desc: 'Pagamento instantâneo com confirmação imediata.',
+        pm_boleto_title: 'Boleto',
+        pm_boleto_desc: 'Pagamento no boleto bancário.',
+        pm_cc_noint_title: 'Cartão de Crédito — Sem Juros',
+        pm_cc_noint_desc: 'À vista ou parcelado em até 4x sem juros.',
+        pm_cc_int_title: 'Cartão de Crédito — Com Juros',
+        pm_cc_int_desc: 'Parcelado de 5x até 10x com juros.',
+        pm_load_error: 'Não foi possível carregar as formas de pagamento agora.',
+
+        // Filtros catálogo
+        filter_category_label: 'Categoria',
+        filter_category_all: 'Todas as categorias',
+        filter_level_label: 'Nível',
+        filter_level_all: 'Todos os níveis',
+        filter_price_label: 'Faixa de Preço',
+        filter_price_all: 'Todas as faixas',
+        filter_apply: 'Aplicar filtros',
+        filter_clear: 'Limpar',
+        filter_active_aria: 'Filtros ativos',
+        catalog_summary: 'Exibindo {filtered} de {total} cursos.',
+        catalog_empty: 'Nenhum curso encontrado para os filtros selecionados.',
 
         // Login
         login_title: 'Acessar sua Conta',
@@ -144,13 +210,50 @@ const translations = {
         num_sub: 'Discover the scale of our impact on professional qualification for auditors and managers across Brazil.',
         num_btn: 'Join these numbers',
         num_students: 'Graduates',
+        num_approval: 'Approval Rate',
+        num_specializations: 'Courses and Specializations',
+        num_partners: 'Partner Companies (In Company)',
         num_courses: 'Available Courses',
         num_companies: 'Companies Served',
         num_satisfaction: 'Satisfaction',
 
         dep_title: 'Student Testimonials',
         dep_sub: 'See what our students and corporate clients say about ISOAcademy.',
+        dep_prev: 'Previous',
+        dep_next: 'Next',
         dep_btn: 'Come be part of our story',
+
+        // About us
+        about_tag: 'Who we are',
+        about_title: 'Training ISO Standards Specialists since 2010',
+        about_lead: 'ISOAcademy was founded with a clear purpose: to make knowledge about International Standards accessible, practical, and transformative for professionals and companies across Brazil.',
+        about_history_title: 'Our Story',
+        about_history_p1: 'Founded in São Paulo in 2010, ISOAcademy emerged from the vision of certified consultants and auditors who identified a gap in the market: there was a lack of high-quality, practical, and accessible courses on ISO Standards.',
+        about_history_p2: 'With over 15 years of operation, we have trained more than 12,000 professionals and supported 850+ companies in In-Company training projects, consolidating our position as a national benchmark in quality, environment, health, and occupational safety.',
+        about_history_p3: 'Today, we combine in-person and e-learning methodologies to deliver the best learning experience, with internationally recognized certification.',
+        about_mission_title: 'Mission',
+        about_mission_text: 'To train professionals and organizations to implement, audit, and improve management systems based on ISO Standards, driving operational excellence.',
+        about_vision_title: 'Vision',
+        about_vision_text: 'To be the leading school for ISO standards training in Latin America, recognized for teaching quality and real impact on our students\' careers.',
+        about_values_title: 'Values',
+        about_val1: '✔ Technical excellence',
+        about_val2: '✔ Commitment to students',
+        about_val3: '✔ Transparency and ethics',
+        about_val4: '✔ Continuous innovation',
+        about_val5: '✔ Real impact',
+        about_team_title: 'Our Team',
+        about_role_founder: 'Founder & Lead Auditor',
+        about_team_carlos: 'ISO 9001 / 14001 / 45001 auditor, with 20 years of experience in multinationals and consulting firms.',
+        about_role_director: 'Academic Director',
+        about_team_ana: 'Specialist in instructional design and e-learning. Responsible for the methodology of all courses.',
+        about_role_inco: 'In-Company Manager',
+        about_team_ricardo: 'Specialist in customized corporate training for industry, healthcare, and laboratories.',
+        about_cta_title: 'Ready to grow your career?',
+        about_cta_sub: 'Explore our ISO course catalog and start your certification journey today.',
+        about_cta_catalog: '📚 View Course Catalog',
+        about_cta_inco: '🏢 In-Company Training',
+        about_aside_numbers: '📊 In Numbers',
+        about_aside_certs: '🏅 Certifications Offered',
 
         ic_title: '🏢 In-Company Training',
         ic_sub: 'Customized ISO courses delivered at your company\'s premises, for your entire team.',
@@ -184,14 +287,43 @@ const translations = {
 
         cart_title: 'Your Shopping Cart',
         cart_course: 'Course',
+        cart_quantity: 'Quantity',
         cart_price: 'Price',
         cart_action: 'Action',
+        cart_subtotal_label: 'Subtotal',
+        cart_summary_title: 'Order Summary',
         cart_subtotal: 'Subtotal:',
         cart_total: 'Total:',
         cart_checkout: 'Checkout',
+        cart_go_payment: 'Go to payment',
+        cart_payment_methods: 'Payment Methods',
+        cart_clear: 'Clear Cart',
         cart_viewcourses: 'View Courses',
         cart_remove: 'Remove',
         cart_empty: 'Your cart is empty.',
+
+        pm_pix_title: 'PIX',
+        pm_pix_desc: 'Instant payment with immediate confirmation.',
+        pm_boleto_title: 'Bank Slip',
+        pm_boleto_desc: 'Payment via bank slip.',
+        pm_cc_noint_title: 'Credit Card — No Interest',
+        pm_cc_noint_desc: 'One-time payment or up to 4 installments with no interest.',
+        pm_cc_int_title: 'Credit Card — With Interest',
+        pm_cc_int_desc: 'Installments from 5x to 10x with interest.',
+        pm_load_error: 'Could not load payment methods right now.',
+
+        // Catalog filters
+        filter_category_label: 'Category',
+        filter_category_all: 'All categories',
+        filter_level_label: 'Level',
+        filter_level_all: 'All levels',
+        filter_price_label: 'Price Range',
+        filter_price_all: 'All ranges',
+        filter_apply: 'Apply filters',
+        filter_clear: 'Clear',
+        filter_active_aria: 'Active filters',
+        catalog_summary: 'Showing {filtered} of {total} courses.',
+        catalog_empty: 'No courses found for the selected filters.',
 
         login_title: 'Access Your Account',
         login_email: 'E-mail',
@@ -612,6 +744,11 @@ translations.hi = {
     aside_reviews: 'समीक्षाएँ'
 };
 
+Object.keys(translations).forEach((lang) => {
+    if (lang === 'pt' || lang === 'en') return;
+    translations[lang] = { ...translations.en, ...translations[lang] };
+});
+
 // ─── Translation Engine ──────────────────────────────────────────────────────
 
 const LANG_KEY = 'isoacademy_lang';
@@ -810,6 +947,12 @@ function getCurrentLang() {
     return SUPPORTED.includes(lang) ? lang : 'pt';
 }
 
+function translateKey(key, lang = getCurrentLang()) {
+    const dict = translations[lang] || translations.pt;
+    const fallback = translations.pt;
+    return dict[key] !== undefined ? dict[key] : fallback[key];
+}
+
 function applyLang(lang) {
     if (!SUPPORTED.includes(lang)) lang = 'pt';
     const dict = translations[lang];
@@ -832,6 +975,26 @@ function applyLang(lang) {
         if (value !== undefined) {
             el.setAttribute('placeholder', value);
         }
+    });
+
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria-label');
+        const value = dict[key] !== undefined ? dict[key] : fallback[key];
+        if (value !== undefined) {
+            el.setAttribute('aria-label', value);
+        }
+    });
+
+    document.querySelectorAll('[data-i18n-template]').forEach(el => {
+        const key = el.getAttribute('data-i18n-template');
+        let value = dict[key] !== undefined ? dict[key] : fallback[key];
+        if (value === undefined) return;
+
+        value = String(value)
+            .replace('{filtered}', el.getAttribute('data-count-filtered') || '')
+            .replace('{total}', el.getAttribute('data-count-total') || '');
+
+        el.textContent = value;
     });
 
     // Update document lang attribute
@@ -872,3 +1035,4 @@ function initI18n() {
 // Expose globally
 window.applyLang = applyLang;
 window.initI18n = initI18n;
+window.translateKey = translateKey;

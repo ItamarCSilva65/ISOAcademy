@@ -9,7 +9,7 @@
 
 <section class="cart-soft-page">
 
-    <h1 class="page-title">Seu Carrinho de Compras</h1>
+    <h1 class="page-title" data-i18n="cart_title">Seu Carrinho de Compras</h1>
 
     <div class="cart-container">
         {{#if hasItems}}
@@ -17,11 +17,11 @@
             <table class="cart-table">
                 <thead>
                     <tr>
-                        <th>Curso</th>
-                        <th>Quantidade</th>
-                        <th>Preço</th>
-                        <th>Subtotal</th>
-                        <th>Ação</th>
+                        <th data-i18n="cart_course">Curso</th>
+                        <th data-i18n="cart_quantity">Quantidade</th>
+                        <th data-i18n="cart_price">Preço</th>
+                        <th data-i18n="cart_subtotal_label">Subtotal</th>
+                        <th data-i18n="cart_action">Ação</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,7 +37,7 @@
                         <td>{{this.quantidade}}</td>
                         <td>{{formatCurrency this.preco}}</td>
                         <td>{{formatCurrency this.subtotal}}</td>
-                        <td><a href="/carrinho?remove={{this.id}}" class="btn-remove">Remover</a></td>
+                        <td><a href="/carrinho?remove={{this.id}}" class="btn-remove" data-i18n="cart_remove">Remover</a></td>
                     </tr>
                     {{/each}}
                 </tbody>
@@ -45,30 +45,30 @@
         </div>
 
         <div class="cart-summary">
-            <h2>Resumo do Pedido</h2>
+            <h2 data-i18n="cart_summary_title">Resumo do Pedido</h2>
             <div class="summary-row">
-                <span>Subtotal:</span>
+                <span data-i18n="cart_subtotal">Subtotal:</span>
                 <span>R$ {{total}}</span>
             </div>
             <div class="summary-row total">
-                <span>Total:</span>
+                <span data-i18n="cart_total">Total:</span>
                 <span>R$ {{total}}</span>
             </div>
-            <button id="showPaymentMethods" class="btn btn-success btn-block cart-action-gap">Finalizar Compra</button>
-            <a href="/cursos" class="btn btn-primary btn-block">Ver Cursos</a>
-            <a href="/carrinho?clear=1" class="btn btn-outline-secondary btn-block cart-action-top">Limpar Carrinho</a>
+            <button id="showPaymentMethods" class="btn btn-success btn-block cart-action-gap" data-i18n="cart_checkout">Finalizar Compra</button>
+            <a href="/cursos" class="btn btn-primary btn-block" data-i18n="cart_viewcourses">Ver Cursos</a>
+            <a href="/carrinho?clear=1" class="btn btn-outline-secondary btn-block cart-action-top" data-i18n="cart_clear">Limpar Carrinho</a>
 
             <div id="paymentMethodsBox" class="payment-methods-box">
-                <h3 class="payment-methods-title">Formas de Pagamento</h3>
+                <h3 class="payment-methods-title" data-i18n="cart_payment_methods">Formas de Pagamento</h3>
                 <div id="paymentMethodsList" class="payment-methods-list"></div>
-                <a href="/checkout" class="btn btn-success btn-block cart-action-top">Ir para pagamento</a>
+                <a href="/checkout" class="btn btn-success btn-block cart-action-top" data-i18n="cart_go_payment">Ir para pagamento</a>
             </div>
         </div>
 
         {{else}}
         <div class="empty-cart">
-            <p>Seu carrinho está vazio.</p>
-            <a href="/" class="btn btn-primary">Ver Cursos</a>
+            <p data-i18n="cart_empty">Seu carrinho está vazio.</p>
+            <a href="/" class="btn btn-primary" data-i18n="cart_viewcourses">Ver Cursos</a>
         </div>
         {{/if}}
     </div>
@@ -76,6 +76,13 @@
     {{#if hasItems}}
     <script>
         (function () {
+            const t = (key, fallback) => {
+                if (typeof window.translateKey === 'function') {
+                    return window.translateKey(key) || fallback;
+                }
+                return fallback;
+            };
+
             const button = document.getElementById('showPaymentMethods');
             const box = document.getElementById('paymentMethodsBox');
             const list = document.getElementById('paymentMethodsList');
@@ -90,8 +97,8 @@
                         cards.push({
                             classe: 'payment-card-pix',
                             icone: '⚡',
-                            titulo: 'PIX',
-                            descricao: 'Pagamento instantâneo com confirmação imediata.'
+                            titulo: t('pm_pix_title', 'PIX'),
+                            descricao: t('pm_pix_desc', 'Pagamento instantâneo com confirmação imediata.')
                         });
                     }
 
@@ -99,8 +106,8 @@
                         cards.push({
                             classe: 'payment-card-boleto',
                             icone: '🧾',
-                            titulo: 'Boleto',
-                            descricao: 'Pagamento no boleto bancário.'
+                            titulo: t('pm_boleto_title', 'Boleto'),
+                            descricao: t('pm_boleto_desc', 'Pagamento no boleto bancário.')
                         });
                     }
 
@@ -108,14 +115,14 @@
                         cards.push({
                             classe: 'payment-card-cartao',
                             icone: '💳',
-                            titulo: 'Cartão de Crédito — Sem Juros',
-                            descricao: 'À vista ou parcelado em até 4x sem juros.'
+                            titulo: t('pm_cc_noint_title', 'Cartão de Crédito — Sem Juros'),
+                            descricao: t('pm_cc_noint_desc', 'À vista ou parcelado em até 4x sem juros.')
                         });
                         cards.push({
                             classe: 'payment-card-cartao',
                             icone: '💳',
-                            titulo: 'Cartão de Crédito — Com Juros',
-                            descricao: 'Parcelado de 5x até 10x com juros.'
+                            titulo: t('pm_cc_int_title', 'Cartão de Crédito — Com Juros'),
+                            descricao: t('pm_cc_int_desc', 'Parcelado de 5x até 10x com juros.')
                         });
                     }
                 });
@@ -144,7 +151,7 @@
                     renderPaymentLines(data.formasPagamento || []);
                     box.style.display = 'block';
                 } catch (error) {
-                    list.innerHTML = '<div class="payment-load-error">Não foi possível carregar as formas de pagamento agora.</div>';
+                    list.innerHTML = `<div class="payment-load-error">${t('pm_load_error', 'Não foi possível carregar as formas de pagamento agora.')}</div>`;
                     box.style.display = 'block';
                 }
             });

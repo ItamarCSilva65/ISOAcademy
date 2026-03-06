@@ -20,9 +20,9 @@
     {{#if isFullList}}
     <form method="GET" action="/cursos" class="catalog-filter-bar">
         <div class="filter-group">
-            <label for="filter-categoria">Categoria</label>
+            <label for="filter-categoria" data-i18n="filter_category_label">Categoria</label>
             <select id="filter-categoria" name="categoria">
-                <option value="">Todas as categorias</option>
+                <option value="" data-i18n="filter_category_all">Todas as categorias</option>
                 {{#each categoryOptions}}
                 <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
                 {{/each}}
@@ -30,9 +30,9 @@
         </div>
 
         <div class="filter-group">
-            <label for="filter-nivel">Nível</label>
+            <label for="filter-nivel" data-i18n="filter_level_label">Nível</label>
             <select id="filter-nivel" name="nivel">
-                <option value="">Todos os níveis</option>
+                <option value="" data-i18n="filter_level_all">Todos os níveis</option>
                 {{#each levelOptions}}
                 <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
                 {{/each}}
@@ -40,9 +40,9 @@
         </div>
 
         <div class="filter-group">
-            <label for="filter-faixa-preco">Faixa de Preço</label>
+            <label for="filter-faixa-preco" data-i18n="filter_price_label">Faixa de Preço</label>
             <select id="filter-faixa-preco" name="faixa_preco">
-                <option value="">Todas as faixas</option>
+                <option value="" data-i18n="filter_price_all">Todas as faixas</option>
                 {{#each priceOptions}}
                 <option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
                 {{/each}}
@@ -50,19 +50,19 @@
         </div>
 
         <div class="filter-actions">
-            <button type="submit" class="btn btn-primary">Aplicar filtros</button>
+            <button type="submit" class="btn btn-primary" data-i18n="filter_apply">Aplicar filtros</button>
             {{#if filters.hasActive}}
-            <a href="/cursos" class="btn btn-outline-secondary">Limpar</a>
+            <a href="/cursos" class="btn btn-outline-secondary" data-i18n="filter_clear">Limpar</a>
             {{/if}}
         </div>
     </form>
 
-    <p class="catalog-filter-summary">
+    <p class="catalog-filter-summary" data-i18n-template="catalog_summary" data-count-filtered="{{totalFiltered}}" data-count-total="{{totalCourses}}">
         Exibindo {{totalFiltered}} de {{totalCourses}} cursos.
     </p>
 
     {{#if filters.hasActive}}
-    <div class="active-filter-chips" aria-label="Filtros ativos">
+    <div class="active-filter-chips" aria-label="Filtros ativos" data-i18n-aria-label="filter_active_aria">
         {{#each activeFilterChips}}
         <span class="filter-chip">{{this.label}}</span>
         {{/each}}
@@ -89,7 +89,7 @@
             </div>
         </article>
         {{else}}
-        <p class="catalog-empty">Nenhum curso encontrado para os filtros selecionados.</p>
+        <p class="catalog-empty" data-i18n="catalog_empty">Nenhum curso encontrado para os filtros selecionados.</p>
         {{/each}}
     </div>
 
