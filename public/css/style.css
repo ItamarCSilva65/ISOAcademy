@@ -467,6 +467,20 @@ body.high-contrast .side-nav-link:focus {
     border-color: #4a8067 !important;
 }
 
+body.high-contrast .side-nav-link:active,
+body.high-contrast .side-nav-link.is-current {
+    background: #dceadf !important;
+    color: #0f2b1f !important;
+    border-color: #5f8f78 !important;
+}
+
+body.high-contrast .side-nav-link:active .side-nav-label,
+body.high-contrast .side-nav-link:active .side-nav-icon,
+body.high-contrast .side-nav-link.is-current .side-nav-label,
+body.high-contrast .side-nav-link.is-current .side-nav-icon {
+    color: #0f2b1f !important;
+}
+
 body.high-contrast .side-nav-label,
 body.high-contrast .side-nav-icon {
     color: #f8fffb !important;

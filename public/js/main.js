@@ -62,6 +62,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ---- Destaque da seção ativa na navegação lateral ----
+    const sideNavLinks = document.querySelectorAll('.side-nav-link');
+    if (sideNavLinks.length) {
+        const normalizePath = (value) => {
+            const path = (value || '').trim();
+            if (!path) return '/';
+            const withoutSlash = path.endsWith('/') && path.length > 1 ? path.slice(0, -1) : path;
+            return withoutSlash || '/';
+        };
+
+        const currentPath = normalizePath(window.location.pathname);
+
+        sideNavLinks.forEach((link) => {
+            const href = link.getAttribute('href') || '';
+            const linkPath = normalizePath(href);
+            if (linkPath === currentPath) {
+                link.classList.add('is-current');
+            }
+        });
+    }
+
     // ---- Inicializar tradução (i18n) ----
     if (typeof initI18n === 'function') {
         initI18n();
