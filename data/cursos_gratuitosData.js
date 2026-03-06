@@ -22,7 +22,7 @@ const cursos_gratuitos = [
             fr: 'Traitez les non-conformités de manière efficace et efficiente. Apprenez les concepts fondamentaux de la norme.',
             es: 'Trate las no conformidades de forma eficiente y eficaz. Aprenda los conceptos fundamentales de la norma.'
         },
-        img: '/img/courses/free-nao-conformidades.png',
+        img: '/img/capas_exclusivas/free-nao-conformidades.jpg',
         destaque: false
     },
     {
@@ -46,7 +46,7 @@ const cursos_gratuitos = [
             fr: 'Comprenez ce qu\'est un audit interne et comment il contribue à l\'amélioration continue du système de management.',
             es: 'Comprenda qué es una auditoría interna y cómo contribuye a la mejora continua del sistema de gestión.'
         },
-        img: '/img/courses/free-auditoria-interna.png',
+        img: '/img/capas_exclusivas/free-auditoria-interna.jpg',
         destaque: false
     }
 ];

@@ -544,7 +544,7 @@ const coursesWithMeta = courses.map((courseItem) => {
     const category = inferCategory(courseItem.id);
     const level = inferLevel(courseItem.id, courseItem.preco);
     const isNewCourse = !courseItem.id.startsWith('iso-');
-    const generatedLocalCover = `/img/courses/${courseItem.id}.png`;
+    const generatedLocalCover = `/img/capas_exclusivas/${courseItem.id}.jpg`;
 
     return {
         ...courseItem,
