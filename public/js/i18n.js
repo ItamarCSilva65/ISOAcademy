@@ -182,6 +182,7 @@ const translations = {
 
         // Footer
         footer_links: 'Links Rápidos',
+        footer_about: 'Sobre Nós',
         footer_faq: 'FAQ',
         footer_contact: 'Contato',
         footer_social: 'Redes Sociais',
@@ -193,6 +194,8 @@ const translations = {
         footer_privacy: 'Política de Privacidade',
 
         // Aside
+        aside_quick_access: 'Acesso rápido',
+        aside_about: 'Sobre<br>Nós',
         aside_numbers: 'Números',
         aside_reviews: 'Depoi-<br>mentos',
     },
@@ -363,6 +366,7 @@ const translations = {
         reg_btn: 'Sign Up',
 
         footer_links: 'Quick Links',
+        footer_about: 'About Us',
         footer_faq: 'FAQ',
         footer_contact: 'Contact',
         footer_social: 'Social Media',
@@ -373,6 +377,8 @@ const translations = {
         footer_terms: 'Terms of Use',
         footer_privacy: 'Privacy Policy',
 
+        aside_quick_access: 'Quick Access',
+        aside_about: 'About<br>Us',
         aside_numbers: 'Numbers',
         aside_reviews: 'Reviews',
     },
@@ -464,6 +470,7 @@ const translations = {
         reg_btn: 'S\'inscrire',
 
         footer_links: 'Liens Rapides',
+        footer_about: 'À propos',
         footer_faq: 'FAQ',
         footer_contact: 'Contact',
         footer_social: 'Réseaux Sociaux',
@@ -474,6 +481,8 @@ const translations = {
         footer_terms: 'Conditions d\'Utilisation',
         footer_privacy: 'Politique de Confidentialité',
 
+        aside_quick_access: 'Accès rapide',
+        aside_about: 'À propos',
         aside_numbers: 'Chiffres',
         aside_reviews: 'Avis',
     },
@@ -565,6 +574,7 @@ const translations = {
         reg_btn: 'Registrarse',
 
         footer_links: 'Enlaces Rápidos',
+        footer_about: 'Sobre nosotros',
         footer_faq: 'FAQ',
         footer_contact: 'Contacto',
         footer_social: 'Redes Sociales',
@@ -575,6 +585,8 @@ const translations = {
         footer_terms: 'Términos de Uso',
         footer_privacy: 'Política de Privacidad',
 
+        aside_quick_access: 'Acceso rápido',
+        aside_about: 'Sobre<br>nosotros',
         aside_numbers: 'Números',
         aside_reviews: 'Testi-<br>monios',
     }
@@ -1008,6 +1020,14 @@ function applyLang(lang) {
         const value = dict[key] !== undefined ? dict[key] : fallback[key];
         if (value !== undefined) {
             el.setAttribute('aria-label', value);
+        }
+    });
+
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+        const key = el.getAttribute('data-i18n-title');
+        const value = dict[key] !== undefined ? dict[key] : fallback[key];
+        if (value !== undefined) {
+            el.setAttribute('title', String(value).replace(/<br\s*\/?\s*>/gi, ' '));
         }
     });
 
